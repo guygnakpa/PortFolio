@@ -12,6 +12,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly_express as px
 import statsmodels.api as sm
+import openpyxl as xls
 #_____________________________________________________________
 hide_streamlit_style = """
             <style>
