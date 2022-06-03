@@ -192,7 +192,7 @@ if Nav_Menu == "Resume":
 ########################################################################################################################
 ########################################################################################################################
 if Nav_Menu == "Stablecoins Analysis":
-    st.markdown("<h1 style='text-align: center; color: white;'>""Stablecoins: Key Roles in Blockchain Traditional Banking""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white;'>""Stablecoins: Key Roles in Blockchain & Traditional Banking""</h1>", unsafe_allow_html=True)
     #Name on document
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Guy L. Gnakpa""</h1>", unsafe_allow_html=True)
     #Date of on documents
