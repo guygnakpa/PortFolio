@@ -22,7 +22,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 #_____________________________________________________________
-#st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 #Insert navigation bar menu
 Nav_Menu=option_menu(None,["Resume","Stablecoins Analysis","DeFi Liquidity Aggregator",
                            "SQL Business Analysis","System Architecture Analysis",
