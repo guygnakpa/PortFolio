@@ -178,7 +178,7 @@ if Nav_Menu == "Resume":
                                          "Microsoft Project, Microsoft Visio, Microsoft Excel, Microsoft Word, Discord, and Python were all utilized")
     txt4("Financial & Marketing Analysis","A case study higlighting the utilization of financial documents and reportings "
                                           "to evaluate how to strategically implement a product in a new market sector.","Completed with Google Suite")
-    txt4("Business Ethics Analysis","Business Ethics case study evaluating ethical approaches to marketing, corporate ethics, and social respnsibility.",
+    txt4("Business Ethics Analysis","Business Ethics case study evaluating ethical approaches to marketing, and corporate social responsibility.",
                                     "Completed with Google Suite")
     #Insert Resume for Download
     with open("Guy Gnakpa_Recent_Resume.pdf", "rb") as file:
@@ -192,7 +192,7 @@ if Nav_Menu == "Resume":
 ########################################################################################################################
 ########################################################################################################################
 if Nav_Menu == "Stablecoins Analysis":
-    st.markdown("<h1 style='text-align: center; color: white;'>""Stablecoins: Key Roles in Blockchain and Finance Adoption""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white;'>""Stablecoins: Key Roles in Blockchain Traditional Banking""</h1>", unsafe_allow_html=True)
     #Name on document
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Guy L. Gnakpa""</h1>", unsafe_allow_html=True)
     #Date of on documents
