@@ -807,7 +807,7 @@ if Nav_Menu == "Stablecoins Analysis":
              "Traditional stablecoins have shown lots of promises for the near future. The capibility for stablecoins to become mainstream has raised a primary concern for its reverse mechanism. Many individuals fear "
              "stablecoins are not fully backed by reserve currencies they claim. A stablecoin that is not sufficiently backed by cash, bank deposits, treasury bills, commodities or corporate bonds can experience detrimental liquidation events. "
              "This is a critical risk that can affect the greater crypto market. Algorithmic-backed stablecoins are the most susceptable to such vulnerability. A clear example of this concern has been examplified by the stablecoin TerraUSD. "
-             "TerraUSD by Terrafor Labs is an algorithmic-backed stablecoin that collapsed with a loss of approximately $40 billion, including Terra Luna (native token), in less than seven days. The lack of reserves, risky stabilizer protocol and fixed high yield of its governance token(LUNA) led to de-risking pressure. "
+             "TerraUSD by Terrafor Labs is an algorithmic-backed stablecoin that collapsed with a loss of approximately $45 billion, including Terra Luna (native token), in less than seven days. The lack of reserves, risky stabilizer protocol and fixed high yield of its governance token(LUNA) led to de-risking pressure. "
              " A domino-effect of selling pressure caused many investors to lose life savings. This event is considered to be one of the most catastrophic in the history of cryptocurrency. In figures 5.0 and 5.1A, one graph shows the volume collapse of TerraUSD while the other shows the price collapse of its governance token Terra Luna. "
              " A correlation between the stablecoins's volume and governance token is evident. On May 6th, 2022 theres a massive retracement on both graphs. There seem to be an injection of liquidity in TerraUSD on May 7th, 10th and 12th, however; "
              " the sell off continued and Terra Luna kept dumping. The $1 stablecoin has been de-pegged from the US dollar since May 9th, 2022 and is currently trading below $0.10. The governance token, Terra Luna, was once trading at $116.29, today the same token is trading bellow $0.003. "
@@ -932,6 +932,9 @@ if Nav_Menu == "Stablecoins Analysis":
     
     [finextra.com, Jeremy Light (2022), "The Risks to Society of central Bank Digital Currencies"]
         (https://www.finextra.com/blogposting/21584/the-risks-to-society-of-central-bank-digital-currencies)
+        
+    [bloomberg.com, Hannah Miller (2022), "Terra $45 Billion Face Plant Creates Crowd of Crypto Losers"]
+        (https://www.bloomberg.com/news/articles/2022-05-14/terra-s-45-billion-face-plant-creates-a-crowd-of-crypto-losers)
     
     [Coingecko API ]
         (https://www.coingecko.com/en/api/documentation)
