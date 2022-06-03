@@ -1033,7 +1033,7 @@ if Nav_Menu == "DeFi Liquidity Aggregator":
         ETH_Ratio_Metric=(ETH_Ratio_Metric[0]/TVL_Metric[0])
         ETH_Ratio_Metric="{:.0%}".format(ETH_Ratio_Metric)
         st.metric("ETHEREUM TVL DOMINANCE", ETH_Ratio_Metric)
-    st.info("---------------------------------------------------------------------------------------------------------------------------The liquidity charts below are interactive. Selected or unselect features for comparisons-------------------------------------------------------------------------------------------------------------------------")
+    st.info("------------------------------------------------------------------------The liquidity charts below are interactive. Selected or unselect features for comparisons-------------------------------------------------------------------------------------------------------------------------")
     #__________________________________________________Insert Category VS. Networks_________________________________________
     AlgoStable_output=Protocol_response_Df2.loc[Protocol_response_Df2["category"]=="Algo-Stables"]
     Bridge_output=Protocol_response_Df2.loc[Protocol_response_Df2["category"]=="Bridge"]
