@@ -1159,7 +1159,7 @@ if Nav_Menu == "DeFi Liquidity Aggregator":
     st.plotly_chart(DeFi_Categ3_plot)
     "\n"
     "\n"
-    st.info("-------------------------------------------------------------------------Select one or multiple categories for charts to display. Categorical liquidity comparisons-----------------------------------------------------------")
+    st.info("---------------------------------------------------------------------Select one or multiple categories for charts to display. Categorical liquidity comparisons---------------------------------------------------------------")
 
     "\n"
     "\n"
