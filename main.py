@@ -198,6 +198,8 @@ if Nav_Menu == "Stablecoins Analysis":
     #Date of on documents
     st.markdown("<h1 style='text-align: center; color: white; font-size: 120%'>"" May 2022""</h1>", unsafe_allow_html=True)
         #____________________________Insert Abstract and Introduction title/body text___________________________________________
+    "\n"
+    "\n"
     st.markdown("<h1 style='text-align: center; color: white; font-size: 120%'>""Abstract""</h1>", unsafe_allow_html=True)
     #subtitle "Abstract" using markdown function with html
     st.write("<div style='text-align:justify'> ""\n"
