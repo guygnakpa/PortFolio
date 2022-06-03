@@ -708,8 +708,8 @@ if Nav_Menu == "Stablecoins Analysis":
     #insert CBDCs Architecture
     CBDC_col1,CBDC_col2,=st.columns(2)
     with CBDC_col1:
-        CBDC_image0 = Image.open("CBDC Architecture3.png")
-        st.image(CBDC_image0, width=645)
+        CBDC_image0 = Image.open("CBDC  Architecture.png")
+        st.image(CBDC_image0,width=645)
     with CBDC_col2:
         st.info("""
         Figure 3.0: CBDC Models. Expand picture for better visual. 
