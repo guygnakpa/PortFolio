@@ -169,16 +169,16 @@ if Nav_Menu == "Resume":
                                       " of liquidity allocation. Aggregates total value locked, market capitalizations, daily volume, and other "
                                       "metrics for tracking DeFi activity.","API Resquests, Data manipulation and Visual Engineering all with Python libraries.")
     txt4('SQL Business Analysis', "An SQL query case study for a small business operation. Conducted 4 queries, "
-                                              "asking 4 fundamental questions. Turning result of the questions and queries into an insightful "
-                                              "feedback with recommendations for increasing revenue.",
+                                              "asking 4 fundamental questions. Turning results of the questions and queries into an insightful "
+                                              "feedback accompanied with recommendations for increasing revenue.",
                                               "SQL for Data Queries. Python and Streamlit for front-end execution.")
-    txt4("System Architecture Analysis","A system architecture case study focused on system devolpment for data management,"
+    txt4("System Architecture Analysis","A system architecture case study focused on system development for data management,"
                                          " service scheduling and daily reporting for a small business. A full analysis of developing an internal "
                                          "Electronic Data Interchange has been conducted and tested via reports.",
                                          "Microsoft Project, Microsoft Visio, Microsoft Excel, Microsoft Word, Discord, and Python were all utilized")
     txt4("Financial & Marketing Analysis","A case study higlighting the utilization of financial documents and reportings "
                                           "to evaluate how to strategically implement a product in a new market sector.","Completed with Google Suite")
-    txt4("Business Ethics Analysis","Business Ethics case study evaluating ethical approach to marketing and corporate ethics and social respnsibility.",
+    txt4("Business Ethics Analysis","Business Ethics case study evaluating ethical approaches to marketing, corporate ethics, and social respnsibility.",
                                     "Completed with Google Suite")
     #Insert Resume for Download
     with open("Guy Gnakpa_Recent_Resume.pdf", "rb") as file:
