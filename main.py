@@ -454,7 +454,7 @@ if Nav_Menu == "Stablecoins Analysis":
     #_____________________________________Import GoingeckoAPIexcel file_____________________________________________________
     #import data
     BTC_USDT_DF=pd.read_excel("Stablecoins.xlsx")
-#______________________________________CLean Data for Trend and Regrression Analysis____________________________________
+#______________________________________CLean Data for Trend and Regression Analysis____________________________________
 #check data before outlier -> NUll
     Null_check=BTC_USDT_DF.isnull().sum()
 
@@ -711,7 +711,7 @@ if Nav_Menu == "Stablecoins Analysis":
     #insert CBDCs Architecture
     CBDC_col1,CBDC_col2,=st.columns(2)
     with CBDC_col1:
-        CBDC_image0 = Image.open("CBDC  Architecture.png")
+        CBDC_image0 = Image.open("CBDC Architecture3.png")
         st.image(CBDC_image0,width=645)
     with CBDC_col2:
         st.info("""
