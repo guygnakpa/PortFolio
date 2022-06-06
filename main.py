@@ -1463,7 +1463,7 @@ if Nav_Menu == "SQL Business Analysis":
 ########################################################################################################################
 if Nav_Menu == "System Architecture Analysis":
     # insert date and participants to of the document
-    st.markdown("<h1 style='text-align: center; color: white;'>""Case Study: Systems Analysis and Design""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white;'>""Systems Architecture and Design Analysis: Hudson Kayak Adventures""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Oumar Cisse, Sushmita Shrestha, Guy Gnakpa ""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Advanced Info Technology""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Dr. Beaudin""</h1>", unsafe_allow_html=True)
