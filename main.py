@@ -128,7 +128,7 @@ if Nav_Menu == "Resume":
     - Utilized dashboards and management software tools to report on fund allocations.
     - Daily communications with internal and external stakeholders led to quality monthly performance.
     - Executed and and monitored trade instructions; subscriptions, redemptions, proxies, transfers.
-    - Conduct daily reconciliations for direct deposits on behalf of the clients.
+    - Conducted daily reconciliations for direct deposits on behalf of the clients.
     - Employing AML/KYC procedures in funds distribution resulted in quality administrative duty and reporting.
     - Authenticated trade instructions and facilitated inquiries in the interest of the client’s investments.
     - Collaborated with Treasury in efforts to execute on demand wired transfers.  
