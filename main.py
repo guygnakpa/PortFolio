@@ -166,7 +166,7 @@ if Nav_Menu == "Resume":
                                  "between Bitcoin and Stablecoins.",
                                  "Machine Learning with Python, Visual engineering with Python, Visualization Dashboard with Tableau.")
     txt4('DeFi Liquidity Aggregator', "A DeFi liquidity aggregator interactive dashboard. Representation of decentralized application (dapp) as an "
-                                      "insightful tools for fundamental understanding of liquidity allocation. Aggregates total value locked, market "
+                                      "insightful tool for fundamental understanding of liquidity allocation. Aggregates total value locked, market "
                                       "capitalization, daily volume, and other metrics for tracking DeFi activity.",
                                       "API Resquests, Data manipulation and Visual Engineering all with Python libraries.")
     txt4('SQL Business Analysis', "An SQL query case study for a small business operation. Conducted 4 queries, "
