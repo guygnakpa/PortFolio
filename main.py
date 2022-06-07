@@ -83,11 +83,11 @@ if Nav_Menu == "Resume":
 
 # ###--------------------------------------------------------------##
     st.markdown("## Profile", unsafe_allow_html=True)
-    st.info("""Goal-oriented and collaborative professional with years of experience in financial services. Utilize analytical 
-    tools to better understand data for valuable insights. Analysis, machine learning models, data visualization and strategic 
-    reporting are my main focus. Strong knowledge of Defi and decentralized applications. Passionate about decentralized ledger 
-    technology and its implication for decades to come. Seeking a challenging opportunity with innovative culture where my skills 
-    and education can add value for all stakeholders.""")
+    st.info("""A goal-oriented and collaborative professional with years of experience in financial services. Skilled at utilizing 
+    analytical tools to better understand data for valuable insights and a focus on analysis, machine learning models, data 
+    visualization and strategic reporting. Holds strong knowledge of Defi and decentralized applications and is passionate about 
+    decentralized ledger technology and its implication for decades to come. Seeking a challenging opportunity with an innovative 
+    culture where my skills and education can add value for all stakeholders.""")
 
 ###--------------------------------------------------------------##
 ### Skills ###
