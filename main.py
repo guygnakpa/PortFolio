@@ -165,9 +165,10 @@ if Nav_Menu == "Resume":
                                  "are discused. Trend analysis and Machine learning modeling are utilised to convey existing relationship "
                                  "between Bitcoin and Stablecoins.",
                                  "Machine Learning with Python, Visual engineering with Python, Visualization Dashboard with Tableau.")
-    txt4('DeFi Liquidity Aggregator', "A DeFi liquidity aggregator interactive dashboard. Insightful tools for fundamental understanding"
-                                      " of liquidity allocation. Aggregates total value locked, market capitalizations, daily volume, and other "
-                                      "metrics for tracking DeFi activity.","API Resquests, Data manipulation and Visual Engineering all with Python libraries.")
+    txt4('DeFi Liquidity Aggregator', "A DeFi liquidity aggregator interactive dashboard. Representation of decentralized application (dapp) as an "
+                                      "insightful tools for fundamental understanding of liquidity allocation. Aggregates total value locked, market "
+                                      "capitalization, daily volume, and other metrics for tracking DeFi activity.",
+                                      "API Resquests, Data manipulation and Visual Engineering all with Python libraries.")
     txt4('SQL Business Analysis', "An SQL query case study for a small business operation. Conducted 4 queries, "
                                               "asking 4 fundamental questions. Turning results of the questions and queries into an insightful "
                                               "feedback accompanied with recommendations for increasing revenue.",
