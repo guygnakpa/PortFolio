@@ -182,11 +182,11 @@ if Nav_Menu == "Resume":
     txt4("Business Ethics Analysis","Business Ethics case study evaluating ethical approaches to marketing, and corporate social responsibility.",
                                     "Completed with Google Suite")
     #Insert Resume for Download
-    with open("Guy Gnakpa_Resume.pdf", "rb") as file:
+    with open("Guy Gnakpa_Resume .pdf", "rb") as file:
         Button = st.download_button(
             label="Download Resume",
             data=file,
-            file_name="Guy Gnakpa_Resume.pdf",
+            file_name="Guy Gnakpa_Resume .pdf",
             mime="image/png"
         )
 ########################################################################################################################
