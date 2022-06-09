@@ -951,8 +951,8 @@ if Nav_Menu == "Stablecoins Analysis":
 ########################################################################################################################
 if Nav_Menu == "DeFi Liquidity Aggregator":
     #______________________________________________#insert logo/title_______________________________________________________
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 500%'>""LarocheN☯mics🥤""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 200%'>""DeFi🥤Aggregator ""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 500%'>""LarocheN☯mics☕""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 200%'>""DeFi💧Aggregator ""</h1>", unsafe_allow_html=True)
     st.info("-----------------------------------------------------------------------------------------------------------------💧------------------------------------------------------------------------------------------------------------------------------------")
     #_________________________________________Call API & Set Dataframes_____________________________________________________
 
