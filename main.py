@@ -1262,11 +1262,9 @@ if Nav_Menu == "DeFi Liquidity Aggregator":
 if Nav_Menu == "SQL Business Analysis":
     # insert date and participants to of the document
     st.markdown("<h1 style='text-align: center; color: white;'>""SQL Business Analysis: LargeCo's Strategic Revenue Improvement Report""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Southern New Hampshire University""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Applied Data Structure and Database""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Dr. Liz HenLey""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Guy Gnakpa ""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""April 21, 2021""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""April 21, 2022""</h1>", unsafe_allow_html=True)
     "\n"
     "\n"
     "\n"
@@ -1467,8 +1465,7 @@ if Nav_Menu == "System Architecture Analysis":
     st.markdown("<h1 style='text-align: center; color: white;'>""System Architecture and Design Analysis: Hudson Kayak Adventures""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Oumar Cisse, Sushmita Shrestha, Guy Gnakpa ""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Advanced Info Technology""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Dr. Beaudin""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""9/26/2021""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""May 26, 2022""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style= color: white; font-size: 95%;'>""</h1>", unsafe_allow_html=True)
     #insert background title and body text
     st.markdown("<h1 style='text-align: center; color: white; font-size: 120%'>Background</h1>", unsafe_allow_html=True)
@@ -1824,11 +1821,9 @@ if Nav_Menu == "System Architecture Analysis":
 if Nav_Menu == "Financial & Marketing Analysis":
     # insert title
     st.markdown("<h1 style='text-align: center; color: white;'>""ABC Corp: Sales and Marketing Initiative to Increase Loyalty Membership Card in Low-Income Communities.""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Southern New Hampshire University""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Human Behavior Organization ""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Dr. Christiane Ackerson""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Guy Gnakpa ""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""June 16, 2021""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""June 16, 2022""</h1>", unsafe_allow_html=True)
     "\n"
     "\n"
     "\n"
@@ -1844,7 +1839,7 @@ if Nav_Menu == "Financial & Marketing Analysis":
         st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""Subject:""</h1>", unsafe_allow_html=True)
 
     with col2:
-        st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""June 16, 2021""</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""June 16, 2022""</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""Sr. Manager of Sales and Marketing ""</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""Guy Gnakpa, Sales and Marketing Associate""</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""Financial Analysis report of Sales and Marketing Initiative to Increase "
@@ -2040,11 +2035,9 @@ if Nav_Menu == "Financial & Marketing Analysis":
 if Nav_Menu == "Business Ethics Analysis":
     # insert header & subheaders
     st.markdown("<h1 style='text-align: center; color: white;'>""ABC Corp: Legal and Ethical Concerns Regarding Proposal to Increase Loyalty Membership Card in Low Income Markets.""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Southern New Hampshire University""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Human Behavior Organization ""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Dr. Christiane Ackerson""</h1>", unsafe_allow_html=True)
     st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Guy Gnakpa ""</h1>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""June 24, 2021""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""June 24, 2022""</h1>", unsafe_allow_html=True)
     "\n"
     "\n"
     "\n"
@@ -2060,7 +2053,7 @@ if Nav_Menu == "Business Ethics Analysis":
         st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""Subject:""</h1>", unsafe_allow_html=True)
 
     with col2:
-        st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""June 24, 2021""</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""June 24, 2022""</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""Legal Team ""</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""Guy Gnakpa, Sales and Marketing Associate""</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: left; color: white; font-size: 150%'>""Legal and Ethical Concerns Regarding Proposal to Increase Membership in Low Income Markets.""</h1>", unsafe_allow_html=True)
