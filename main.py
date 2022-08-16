@@ -980,8 +980,8 @@ if Nav_Menu == "Geography of Cryptocurrency Report":
              "With the help of on-chain data, transactions from any respective blockchain ledger can be studies and interpreted to aid enterprise functions. "
              "To emphasize this point, this analysis report answers fundamental questions associated with received and deposited transactions throughout the world. "
              "The questions below are analyzed to better understand the geographic distribution of cryptocurrency funds. Further, compelling evidence affiliated with "
-             "the volume of these transactions based on a specific time period is discussed. The overarching goal of this report is to inform the reader about cryptocurrency "
-             "usage worldwide through statistical methods, and data visualization.",unsafe_allow_html=True)
+             "the volume of these transactions based on a specific time period is discussed. The overarching goal of this report is the investigation of cruptocurrency transactions and "
+             "inform the reader about its utilization worldwide through statistical methods, and data visualization.",unsafe_allow_html=True)
     "\n"
     #_________________________________Import Statistical Questions _________________________________________________________
     st.info("""
@@ -1162,7 +1162,8 @@ if Nav_Menu == "Geography of Cryptocurrency Report":
     #interpredation bodytext
     st.write("<div style='text-align:justify'> ""\n"
              "When looking at the biggest sub-region for value received, China appears to be the country with the largest volume of "
-             "received transactions over the given time period. Between March, 2019 and Oct 2020, China shows a relatively constant trend. "
+             "received transactions over the given time period. Evidence of seasonality can be observed as the volume of transactions increases right before and "
+             "during the Bitcoin Halving. Between March, 2019 and Oct 2020, China shows a relatively constant trend. "
              "We see a significant positive trend during Oct 2020 and May 2021, resulting to an 8.2 multiple. The volume of received transactions "
              "jumped from 30.53 billion dollars to 251.43 billion dollars. Soon after, we see a tremendous bull-back as low as 20.32 billion dollars. "
              "The Republic of Korea, Japan, Taiwon followed the China trend with a much lower volume.",unsafe_allow_html=True)
@@ -1248,6 +1249,7 @@ if Nav_Menu == "Geography of Cryptocurrency Report":
     st.plotly_chart(WesternEurope_Deposits_TotalTransac_plot0)
     #interpredation bodytext
     st.write("<div style='text-align:justify'> ""\n"
+             "The charts above express seasonality of the cryptocurrency nature led by the 2020 Bitcoin Halving. "
              "The sub-region of the Latin America and the Caribbean show significant volume distribution among all the respective "
              "countries when it comes to value received and deposits. Unlike previous value received charts, the activity level noticeable "
              "since March 1, 2019, especially in Brazil. Drastic increase in deposits begin on July 2020. Brazil, the leading country, shows significant increase from 1.11 million dollars to 4.59 million dollars. "
@@ -1281,10 +1283,10 @@ if Nav_Menu == "Geography of Cryptocurrency Report":
     st.subheader("Catalysts Associated with the 2020 - 2021 Increase of Cryptocurrency Activity ")
     st.info("""
         * 2020 Bitcoin Halving
+            * Institutional Defi activity
+            * Peer-to-peer Platforms 
         * COVID-19 Pandemic 
         * Quantitative Easing (QE)
-        * Institutional Defi activity
-        * Peer-to-peer Platforms 
         """)
     st.write("____")
     #insert button for references
