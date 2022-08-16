@@ -1260,7 +1260,7 @@ if Nav_Menu == "Geography of Cryptocurrency Report":
     "\n"
     "\n"
     st.write("<div style='text-align:justify'> ""\n"
-             "In the sub-region of Western Europe, more fluctuation in the total volume of deposits is apparent from March 1, 2019 to May 1, 2021."
+             "In the sub-region of Western Europe, more fluctuation in the total volume of deposits is apparent from March 1, 2019 to May 1, 2021. "
              "Many peaks and valleys can be identified from December 1, 2019 to present time. May 1, 2021 and Jan 1, 2022 appears to be the peaks with the highest deposit volume "
              "for Germany as the leader. The volume rose from 555.05 thousand dollars to 4.23 million dollars in deposits. With a similar trend, Germany, France and the Netherlands "
              "are the leading nations in the sub-region of Western Europe. Luxembourg, Monaco and Liechtenstein show very little asctivity in compare to the leading countries. "
