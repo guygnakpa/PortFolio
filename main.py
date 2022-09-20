@@ -87,7 +87,7 @@ if Nav_Menu == "Resume":
     st.info("""A goal-oriented and collaborative professional with years of experience in financial services. 
     Skilled at utilizing analytical tools to better understand data for valuable insights with a focus on analysis, 
     machine learning models, data visualization and strategic reporting. Holds strong knowledge of statistical analysis, 
-    and financial applications and is passionate about decentralized ledger technology and its implication for decades to 
+    financial applications and is passionate about decentralized ledger technology and its implication for decades to 
     come. Seeking a challenging opportunity with an innovative culture where my skills and education can add value for all stakeholders.""")
 
 ###--------------------------------------------------------------##
