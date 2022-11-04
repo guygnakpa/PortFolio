@@ -162,7 +162,7 @@ if Nav_Menu == "Resume":
     # ###--------------------------------------------------------------###
     ###PROJECTS###
     st.markdown("## Projects", unsafe_allow_html=True)
-    txt4("Stablecoins Analysis", "An analytical research document describing tablecoins and their functions. The opportunities and risks "
+    txt4("Stablecoins Analysis", "An analytical research document describing stablecoins and their functions. The opportunities and risks "
                                  "are discused. Trend analysis and Machine learning modeling are utilised to convey existing relationship "
                                  "between Bitcoin and Stablecoins.",
                                  "Machine Learning with Python, Visual engineering with Python, Visualization Dashboard with Tableau.")
