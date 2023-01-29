@@ -802,7 +802,7 @@ if Nav_Menu == "Capital Markets Analysis":
         #st.write(market_cap)
         # Add a new row to the DataFrame with the ETF's ticker and market cap
         market_cap_df = market_cap_df.append({"ETF": etf, "Market Cap": market_cap}, ignore_index=True)
-    st.dataframe(market_cap_df)
+    #st.dataframe(market_cap_df)
     #Create bar visualization from prepped dataframe
     Bond_MrkCap=market_cap_df
     Bond_MrkCap=Bond_MrkCap.sort_values(by="Market Cap", ascending=False)
