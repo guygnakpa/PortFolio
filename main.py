@@ -12,7 +12,9 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly_express as px
 import statsmodels.api as sm
+import webbrowser
 import openpyxl as xls
+import yfinance as yf
 #_____________________________________________________________
 st.set_page_config(layout="wide")
 #_____________________________________________________________
@@ -25,15 +27,16 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 #_____________________________________________________________
 #Insert navigation bar menu
-Nav_Menu=option_menu(None,["Resume","Stablecoins Analysis","Geography of Cryptocurrency Report",
+Nav_Menu=option_menu(None,["Resume","Capital Markets Analysis","Stablecoins Analysis","Geography of Cryptocurrency Report",
                            "DeFi Liquidity Aggregator","SQL Business Analysis","System Architecture Analysis",
                            "Financial & Marketing Analysis","Business Ethics Analysis"],
-                     icons=['house', 'bank', 'pin-map-fill', 'droplet-half',
+                     icons=['house','bank', 'currency-bitcoin', 'pin-map-fill', 'droplet-half',
                             'bar-chart-fill','cpu-fill', 'activity', 'credit-card-2-back'],
                      default_index=0,
                      orientation="horizontal")
 
 #insert condition of the navigation meny
+
 if Nav_Menu == "Resume":
     Space_col1,Photo_col2,Space_col3=st.columns(3)
 
@@ -85,20 +88,21 @@ if Nav_Menu == "Resume":
 # ###--------------------------------------------------------------##
     st.markdown("## Profile", unsafe_allow_html=True)
     st.info("""A goal-oriented and collaborative professional with years of experience in financial services. 
-    Skilled at utilizing analytical tools to better understand data for valuable insights with a focus on analysis, 
-    machine learning models, data visualization and strategic reporting. Holds strong knowledge of statistical analysis, 
-    financial applications and is passionate about decentralized ledger technology and its implication for decades to 
-    come. Seeking a challenging opportunity with an innovative culture where my skills and education can add value for all stakeholders.""")
+    Hand on experience with fund management and administration for alternative assets in investment banking. Holds a 
+    graduate-level education in management sciences and quantitative methods. Skilled at utilizing analytical tools to 
+    better understand data for valuable insights with a focus on Data Analysis, ML Models, Data Visualization and Strategic 
+    Reporting. Ability to adapt quickly, identify inefficiencies and communicate effectively with stakeholders. Passionate about 
+    financial instruments, technology and the implication of decentralized ledger technology for decades to come. Seeking a challenging 
+    opportunity with a renown and innovative culture where my experience, skills and education can add value for all stakeholders.""")
 
 ###--------------------------------------------------------------##
 ### Skills ###
     st.markdown("## Skills", unsafe_allow_html=True)
     st.info("""
-    - Python (Pandas, NumPy, Matplotlib, Plotly Expressed, Statsmodel OLS, Streamlit)
-    - Data Visualization/BI (Tableau) Data Wrangling (SQL)
-    - Defi (Dex, Asset Management, Lend/Borrow, Yield)
-    - Microsoft Office (Word, Excel, PowerPoint)
-    - Blockchain (POW, POS, L1, L2)
+    - Machine Learning Models (Regression, Time-series, Clustering, Decision Trees), Statistical Analysis (Exploratory, Predictive, Reporting)
+    - Python (Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn, Streamlit), Data Visualization/BI (Tableau) Data Wrangling (MySQL)
+    - Microsoft Office (Word, Excel, PowerPoint, Visio, Project), Coaching and Mentoring – AICPA (06/21)
+    - Blockchain (POW, POS, L1, L2), Defi Protocols (Dex, Asset Management, Lend/Borrow, Yield)
     """)
 
 ###--------------------------------------------------------------##
@@ -109,7 +113,7 @@ if Nav_Menu == "Resume":
     st.markdown("""
     - Southern New Hampshire University, Manchester, NH
     - NECHE Accredited
-    - GPA: 3.8/4.0
+    - GPA :  3.8/4.0
     """)
     #
     #Bachelor of Arts, Economics
@@ -117,6 +121,7 @@ if Nav_Menu == "Resume":
     st.markdown("""
     - Ramapo College of New Jersey, Mahwah, NJ
     - AACSB Accredited
+    - GPA :  3.0/4.0
     """)
     ###--------------------------------------------------------------##
     ###EXPERIENCE###
@@ -125,43 +130,51 @@ if Nav_Menu == "Resume":
     txt("###### ****BNY Mellon, Woodland Park, NJ****", "****Jul 2020-Jan 2021****")
     st.text("Analyst, Fund Of Funds Custody (Full-Time)")
     st.markdown("""
-    - Assisted in the daily custodial management of large fund of funds  investments.
-    - Utilized dashboards and management software tools to report on fund allocations.
-    - Daily communications with internal and external stakeholders led to quality monthly performance.
-    - Executed and and monitored trade instructions; subscriptions, redemptions, proxies, transfers.
-    - Conducted daily reconciliations for direct deposits on behalf of the clients.
-    - Employing AML/KYC procedures in funds distribution resulted in quality administrative duty and reporting.
-    - Authenticated trade instructions and facilitated inquiries in the interest of the client’s investments.
-    - Collaborated with Treasury in efforts to execute on demand wired transfers.  
-    - Adapting management tools for monthly custody holding fees resulted in accurate and efficient reporting.  
+    - Assisted in the daily custodial management for alternative asset investments. 
+    - Utilized dashboards and management software tools to report on fund allocations. 
+    - Daily communications with internal and external stakeholders led to quality monthly performance. 
+    - Executed and monitored trade instructions; subscriptions, redemptions, proxies, and transfers. 
+    - Conducted daily cash reconciliations for direct demand deposits on behalf of the clients. 
+    - Employing AML/KYC procedures in funds distribution resulted in quality administrative duty and reporting. 
+    - Authenticated trade instructions and facilitated inquiries in the interest of the client’s investments. 
+    - Collaborated with Treasury and Operations teams in effort to execute on-demand wired transfers. 
+    - Adapting management tools for monthly custody holding fees resulted in accurate and efficient reporting. 
+  
     """)
 
     txt("###### ****Premium Merchant Funding, New York, NY****", "****Oct 2018-Sept 2019****")
     st.text("Analyst, Account Management (Full-Time)")
     st.markdown("""
-    - Facilitated a team responsible for monthly capital investment allocation for small and large businesses.
-    - Utilized Google Suite for communication management between stakeholders.
-    - Presentation of products and services resulted in positive capital investments.
-    - Analyzed contract documents to identify ambiguity between financial documents and prerequisites.
-    - Verified business account history to determine previous level of compliance with term structure.
-    - Recommendations of business strategy for future capital investment approval led to an increase of quality service demand.
-    - Engaged in weekly team meetings to develop better plans and revise proper protocols to meet monthly objectives. 
+    - Facilitated a funding team responsible for monthly capital investment allocation in SMEs. 
+    - Exercised a leadership role by training interns on the offered financial products and services. 
+    - Utilized Google Suite for communication management for all stakeholders. 
+    - Presentation of products and services to new and existing clients resulted in a positive increase in capital investments.
+    - Analyzed financial statements, credit history and contract documents to identify ambiguity between financial documents and prerequisites. 
+    - Verified business account history to determine previous level of compliance with term structure. 
+    - Recommendations of business strategy for future capital investment approval led to an increase of quality service demand. 
+ 
     """)
 
     txt(" ###### ****Lobster Life Systems, Lodi, NJ****", "****Aug 2016-Aug 2017****")
     st.text("Assistant Project Manager, Internship (Full-Time)")
     st.markdown("""
-    - Conducted administrative duties for a manufacturing and wholesale business.  
-    - Implemented a management strategy for on demand resources. 
-    - Onboarded new team members to maintain and supply the demand for services.  
-    - Adapted administrative aides, hands on manufacturing production and inventory management.  
-    - Assisted in the strategy of expansion and client acquisition in the north east region of the country.
+    - Conducted administrative duties for a manufacturing and wholesale business. 
+    - Implemented management strategies for on demand resources. 
+    - Onboarded new team members to maintain and supply the demand for services. 
+    - Adapted administrative aides, hands on manufacturing production and inventory management. 
+    - Assisted in the strategy of expansion and client acquisition in the northeast region of the country. 
     - Facilitated communication between internal and external project stakeholders to keep all parties well-informed.  
+  
     """)
 
     # ###--------------------------------------------------------------###
     ###PROJECTS###
     st.markdown("## Projects", unsafe_allow_html=True)
+    txt4("Capital Markets Analysis", "An analysis on capital markets focused on equity and bond securities. The primary and secondary "
+                                    "markets are discussed. Economic factors which effect these markets are explored and illustrated through "
+                                    "data visualisations. Time-series index analysis were conducted with satistical methologies. The market "
+                                    "capitalization of selected Bond ETFs securities are calculated and visually displayed.",
+                                    "API Requests, Data manipulation and visual engineering all completed with excel and python libraries.")
     txt4("Stablecoins Analysis", "An analytical research document describing stablecoins and their functions. The opportunities and risks "
                                  "are discused. Trend analysis and Machine learning modeling are utilised to convey existing relationship "
                                  "between Bitcoin and Stablecoins.",
@@ -172,7 +185,7 @@ if Nav_Menu == "Resume":
     txt4('DeFi Liquidity Aggregator', "A DeFi liquidity aggregator interactive dashboard. Representation of decentralized application (dapp) as an "
                                       "insightful tool for fundamental understanding of liquidity allocation. Aggregates total value locked, market "
                                       "capitalization, daily volume, and other metrics for tracking DeFi activity.",
-                                      "API Resquests, Data manipulation and Visual Engineering all with Python libraries.")
+                                      "API Requests, Data manipulation and Visual Engineering all with Python libraries.")
     txt4('SQL Business Analysis', "An SQL query case study for a small business operation. Conducted 4 queries, "
                                               "asking 4 fundamental questions. Turning results of the questions and queries into an insightful "
                                               "feedback accompanied with recommendations for increasing revenue.",
@@ -186,13 +199,722 @@ if Nav_Menu == "Resume":
     txt4("Business Ethics Analysis","Business Ethics case study evaluating ethical approaches to marketing, and corporate social responsibility.",
                                     "Completed with Google Suite")
     #Insert Resume for Download
-    with open("Guy Gnakpa_Resume.docx", "rb") as file:
+    with open("GuyGnakpa_CV_1.0.pdf", "rb") as file:
         Button = st.download_button(
             label="Download Resume",
             data=file,
-            file_name="Guy Gnakpa_Resume.docx",
+            file_name="GuyGnakpa_CV_1.0.pdf",
             mime="image/png"
         )
+
+    st.write("")
+
+    st.info("""
+    DISCLAIMER: The production of these analyses are solely for educational purposes. The data used to explain certain events 
+    is subject to change, and the analyses are not intended to be used as investment tools. 
+    If these analyses are used for any other purposes than intended, the author is not liable.
+    """)
+########################################################################################################################
+########################################################################################################################
+########################################################################################################################
+if Nav_Menu == "Capital Markets Analysis":
+    #____________________________________Title and author________________________________
+
+    st.markdown("<h1 style='text-align: center; color: white;'>""Capital Markets: Equity and Bond Securities""</h1>", unsafe_allow_html=True)
+    #Name on document
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 150%'>""Guy Gnakpa""</h1>", unsafe_allow_html=True)
+    #Date of on documents
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 120%'>"" January, 2023""</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; font-size: 120%'>" "</h1>", unsafe_allow_html=True)
+
+    #____________________________________Introduction of Capital Markets____________________________________________________
+    #what is capital markets and its sub-categories
+    st.header("Introduction")
+    st.write("<div style='text-align:justify'> ""\n"
+             "Capital markets play a vidal part in the US and global economy. These markets facilitate the free flow of capital in efforts "
+             "to allocate funds towards the best ideas and companies. This financial system allows corporations, governments, and individual "
+             "investors to raise capital by issuing and selling securities such as stocks(equity) and bonds(debt). All US participants benefit from healthy "
+             "capital markets as funds can be utilized to grow businesses, improve technology, finance property investments, and fund infrastructure objectives. "
+             "Many of these efforts lead to growth in the market place and influence the creation of jobs while improving national gross domestic product(GDP). "
+             "Some fundamental economic functions of capital markets include: "
+             ,unsafe_allow_html=True)
+    st.info("""
+    * Creates a link between investors and savers
+    * Creates efficient capital utilization
+    * Provides solution for trading securities
+    * Provides a hedging(derivatives) solution against market risks
+    * Improves the effectiveness of capital allocation thus impacting notional GDP
+    """)
+
+    # intro and functions of primary and secondary capital markets
+    st.header("Sub-categories")
+    st.subheader("Primary Market:")
+    st.write("<div style='text-align:justify'> ""\n"
+             "The primary market is where securities are issued and sold to the public for the first time, such as an initial "
+             "public offering (IPO) of a company's stock. The primary market is where companies and governments raise long-term capital. "
+             "Main functions of the primary market include:"
+             ,unsafe_allow_html=True)
+    st.info("""
+    * Origination: focuses on the examination, evaluation and process of new proposals in the primary market.
+    * Underwriting: investment banks determine the risk and price of particular soon to be issued securities.
+    * Distribution: refers to brokers and dealers who have the ability to dispense new issued securities to institution and retail investors.
+    """)
+    st.subheader("""Secondary Market:""")
+    st.write("<div style='text-align:justify'> ""\n"
+             "The secondary market is where securities that have already been issued are bought and sold among investors. "
+             "I.e the stock market, where investors can buy and sell stocks of publicly traded companies. The secondary market allows "
+             "securities to be traded providing more leverage and liquidity for investors. "
+             "Main functions of the secondary market include: "
+             ,unsafe_allow_html=True)
+    st.info("""
+    * Advise the value of securities
+    * Offers liquidity to investors for their respective assets
+    * Provides a marketplace for financial instruments to be traded.
+    """)
+    #description of financial instruments in capital markets
+    st.subheader("""Financial Instruments in Capital Markets:""")
+    st.info("""
+    * Equities(stocks): Investment share in a company's total capitalisation; making one a shareholder
+    * Debt Securities(bonds): Financial assets that enables a stream of interest payments
+    * Derivatives(futures): Financial instruments who's value are pegged to an underlying asset; i.e, commodities futures, credit default swaps
+    * Exchange Traded Funds(ETFs-SPY): An instrument that replicated the performance of an underlying index. Funds that are traded on an exchange tracking stocks, bonds etc..
+    * Foreign Exchange Instruments(FX-USD/EUR): These instruments consist of currencies and derivatives. Mainly currencies that are purchased and sold globally 
+      based on their respective exchange rate. 
+    """)
+    st.write("___")
+    st.info("""
+    There are many factors that can effect capital markets when analysing performance, expected return and risk exposure.
+    Gross Domestic Product(GDP) is an economic indicator to measure a nation's total productivity level through its products and services.
+    Federal Fund Rate is one of the most important indicator as it determined the cost of capital for central banks to borrow.
+    The cost of capital has a ripple effect throughout the rest of the market participants. The 30-year fixed mortgage is a significant indicator as
+    it correlates with nominal GDP. The housing markets makes up 15-18% of the U.S. GDP. Further, a large volume of fixed-income mortgage securities 
+    and respective derivatives are traded in capital markets. Lastly, the rate of unemployment determined the state of economic 
+    conditions, potential exposure to risk for fixed-income and debt issuers. 
+    
+    Below, there is an interactive dashboard of economic factors that effect the strength of capital markets. In addition,
+    the dashboard provides Time-Series analysis of equity indices and examples of tech stocks. Bonds make up a large portion 
+    of capital markets. With that in mind, the dashboard also illustrates the market capitalization of some of largest Bond ETFs. 
+    """)
+
+    st.write("___")
+    ########################################################################################################################
+    #----------------------------Crearte Data Visualisation----------------------------
+    #Import csv and excel files/prep dataframe
+    #insert qrtly us gdp
+    qrtly_us_GDP=pd.read_csv("QRLY_US_GDP.csv")
+    #st.dataframe(qrtly_us_GDP)
+    qrtly_us_GDP_fig=px.bar(qrtly_us_GDP, x="DATE", y=["GDP"], title="Gross Domestic Product(GDP): 1947 - 2022 | Billions of Dollars | Quarterly")
+    qrtly_us_GDP_fig.update_layout(legend_title="Features",width=1300,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
+    qrtly_us_GDP_fig.update_xaxes(showgrid=False, title="Date")
+    qrtly_us_GDP_fig.update_yaxes(showgrid=False, title="Billions of Dollars")
+    st.plotly_chart(qrtly_us_GDP_fig)
+
+    ColA,ColB=st.columns(2)
+    with ColA:
+        #column1
+        #insert us funds rate
+        US_FundsRate=pd.read_csv("FEDFUNDS.csv")
+        #st.dataframe(US_FundsRate)
+        US_FundsRate_fig=px.line(US_FundsRate, x="DATE", y=["FEDFUNDS"], title="Federal Funds Effective Rate(FEDFUNDS): 1954 - 2022 | Percent | Monthly")
+        US_FundsRate_fig.update_layout(legend_title="Features",width=1100,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
+        US_FundsRate_fig.update_xaxes(showgrid=False, title="Date")
+        US_FundsRate_fig.update_yaxes(showgrid=False, title="Percent")
+        st.plotly_chart(US_FundsRate_fig)
+    with ColB:
+        #insert us 30-year-mortgage
+        US_30yr_Mortgage=pd.read_csv("30yrs_US_Mortgage.csv")
+        #st.dataframe(US_FundsRate)
+        US_30yr_Mortgage_fig=px.line(US_30yr_Mortgage, x="DATE", y=["MORTGAGE_30YR_US"], title="US 30-Year Fixed Rate Mortgage Avg : 1971 - 2023 | Percent | Weekly")
+        US_30yr_Mortgage_fig.update_layout(legend_title="Features",width=1100,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
+        US_30yr_Mortgage_fig.update_xaxes(showgrid=False, title="Date")
+        US_30yr_Mortgage_fig.update_yaxes(showgrid=False, title="Percent")
+        st.plotly_chart(US_30yr_Mortgage_fig)
+
+    #insert table for Unemployment rate
+    st.info("----------------------------------------------------------------------------------------------------------Unemployment Rate: 2012 - 2022---------------------------------------------------------------------------------------------------")
+    UnemploymentRate=pd.read_csv("UnemploymentRate.csv")
+    st.table(UnemploymentRate)
+
+    st.write("___")
+    ########################################################################################################################
+    #----------------------------GSPC----------------------------
+    #create a variable storing the strings of specific indicies
+    #define a function:doownload all indicies of a specific timeframe/return the value
+    Index_GSPC=["^GSPC"] #,"^IXIC","^DJI"
+    @st.cache
+    def GSPC_mining(Index_GSPC):
+        IndexGSPC_data=yf.download(Index_GSPC, start ="1990-01-01", end = None)
+        IndexGSPC_data.reset_index(inplace=True)
+        IndexGSPC_data.rename(columns={"index": "Date"})
+        IndexGSPC_data["Date"]=pd.to_datetime(IndexGSPC_data["Date"], unit="s").dt.date
+        return IndexGSPC_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    IndexGSPC_data0=GSPC_mining(Index_GSPC)
+    def GSPC_chart(IndexGSPC_data0):
+        fig_GSPC=px.line(IndexGSPC_data0, x="Date", y=["Adj Close","Open","Close","High","Low"], title="S&P500 Index: 1990 - Present | Thousands of Dollars | Yearly")
+        fig_GSPC.update_layout(legend_title="Features",width=1300,height=450,title_x=0.5, title_y=.85,plot_bgcolor='rgba(0,0,0,0)')
+        fig_GSPC.update_xaxes(showgrid=False, title="Date")
+        fig_GSPC.update_yaxes(showgrid=True, title="Thousands of Dollars")
+        return fig_GSPC
+        #----------------------------IXIC----------------------------
+    #define a function:doownload all indicies of a specific timeframe/return the value
+    Index_IXIC=["^IXIC"]
+    @st.cache
+    def IXIC_mining(Index_IXIC):
+        IndexIXIC_data=yf.download(Index_IXIC,start = "1990-01-01",end = None)
+        IndexIXIC_data.reset_index(inplace=True)
+        IndexIXIC_data.rename(columns={"index":"Date"})
+        IndexIXIC_data["Date"]=pd.to_datetime(IndexIXIC_data["Date"], unit="s").dt.date
+        return IndexIXIC_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    IndexIXIC_data0=IXIC_mining(Index_IXIC)
+    def IXIC_chart(IndexIXIC_data0):
+        fig_IXIC=px.line(IndexIXIC_data0, x="Date", y=["Adj Close","Open","Close","High","Low"], title="Nasdaq Index: 1990 - Present | Thousands of Dollars | Yearly")
+        fig_IXIC.update_layout(legend_title="Features", width=1300,height=450,title_x=0.5, title_y=.85,plot_bgcolor='rgba(0,0,0,0)')
+        fig_IXIC.update_xaxes(showgrid=False, title="Date")
+        fig_IXIC.update_yaxes(showgrid=True, title="Thousands of Dollars")
+        return fig_IXIC
+        #----------------------------DJI----------------------------
+    #define a function:doownload all indicies of a specific timeframe/return the value
+    Index_DJI=["^DJI"]
+    @st.cache
+    def DJI_mining(Index_DJI):
+        IndexDJI_data=yf.download(Index_DJI,start = "1990-01-01",end = None)
+        IndexDJI_data.reset_index(inplace=True)
+        IndexDJI_data.rename(columns={"index":"Date"})
+        IndexDJI_data["Date"]=pd.to_datetime(IndexDJI_data["Date"], unit="s").dt.date
+        return IndexDJI_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    IndexDJI_data0=DJI_mining(Index_DJI)
+    def DJI_chart(IndexDJI_data0):
+        fig_DJI=px.line(IndexDJI_data0, x="Date", y=["Adj Close", "Open", "Close", "High", "Low"], title="Dow Jones Index: 1990 - Present | Thousands of Dollars | Yearly")
+        fig_DJI.update_layout(legend_title="Features",width=1300, height=450, title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
+        fig_DJI.update_xaxes(showgrid=False, title="Date")
+        fig_DJI.update_yaxes(showgrid=True, title="Thousands of Dollars")
+
+        return fig_DJI
+    #--------------------------------------------------------Create Top stocks chart----------------------------------------
+    #----using yfinance mine the datas for the following tickers["AAPL","MSFT","GOOGL","AMZN","META","TSLA"]-----
+    AAPL_Stock=["AAPL"]
+    @st.cache
+    def AAPL_mining(AAPL_Stock):
+        Stock_AAPL_data=yf.download(AAPL_Stock, start ="2005-01-01", end = None)
+        Stock_AAPL_data.reset_index(inplace=True)
+        Stock_AAPL_data.rename(columns={"index": "Date"})
+        Stock_AAPL_data["Date"]=pd.to_datetime(Stock_AAPL_data["Date"], unit="s").dt.date
+        return Stock_AAPL_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    Stock_AAPL_Stock0= AAPL_mining(AAPL_Stock)
+    def AAPL_chart(Stock_AAPL_Stock0):
+        fig_AAPL=px.line(Stock_AAPL_Stock0, x="Date", y=["Adj Close", "Open", "Close", "High", "Low"], title="Apple: 2005 - Present")
+        fig_AAPL.update_layout(legend_title="Features",
+                               width=1300, height=450,
+                               title_x=0.5, title_y=.85,
+                               plot_bgcolor='rgba(0,0,0,0)')
+        return fig_AAPL
+    #Stock_AAPL_Stock0=AAPL_chart(Stock_AAPL_Stock0)
+    #------------------------------------Mining data for stock:MICROSOFT------------------------------------------
+    #using yfinance mine the datas for the following tickers["AAPL","MSFT","GOOGL","AMZN","META","TSLA"]
+    MSFT_Stock=["MSFT"]
+    @st.cache
+    def MSFT_mining(MSFT_Stock):
+        Stock_MSFT_data=yf.download(MSFT_Stock, start ="2005-01-01", end = None)
+        Stock_MSFT_data.reset_index(inplace=True)
+        Stock_MSFT_data.rename(columns={"index": "Date"})
+        Stock_MSFT_data["Date"]=pd.to_datetime(Stock_MSFT_data["Date"], unit="s").dt.date
+        return Stock_MSFT_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    Stock_MSFT_Stock0= MSFT_mining(MSFT_Stock)
+    def MSFT_chart(Stock_MSFT_Stock0):
+        fig_MSFT=px.line(Stock_MSFT_Stock0, x="Date", y=["Adj Close", "Open", "Close", "High", "Low"], title="Microsoft: 2005 - Present")
+        fig_MSFT.update_layout(legend_title="Features",
+                               width=1300, height=450,
+                               title_x=0.5, title_y=.85,
+                               plot_bgcolor='rgba(0,0,0,0)')
+        return fig_MSFT
+    #Stock_MSFT_Stock0=MSFT_chart(Stock_MSFT_Stock0)
+    #------------------------------------Mining data for stock:GOOGLE------------------------------------------
+    #using yfinance mine the datas for the following tickers["AAPL","MSFT","GOOGL","AMZN","META","TSLA"]
+    GOOGL_Stock=["GOOGL"]
+    @st.cache
+    def GOOGL_mining(GOOGL_Stock):
+        Stock_GOOGL_data=yf.download(GOOGL_Stock, start ="2005-01-01", end = None)
+        Stock_GOOGL_data.reset_index(inplace=True)
+        Stock_GOOGL_data.rename(columns={"index": "Date"})
+        Stock_GOOGL_data["Date"]=pd.to_datetime(Stock_GOOGL_data["Date"], unit="s").dt.date
+        return Stock_GOOGL_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    Stock_GOOGL_Stock0=GOOGL_mining(GOOGL_Stock)
+    def GOOGL_chart(Stock_GOOGL_Stock0):
+        fig_GOOGL=px.line(Stock_GOOGL_Stock0, x="Date", y=["Adj Close", "Open", "Close", "High", "Low"], title="Google: 2005 - Present")
+        fig_GOOGL.update_layout(legend_title="Features",
+                                width=1300, height=450,
+                                title_x=0.5, title_y=.85,
+                                plot_bgcolor='rgba(0,0,0,0)')
+        return fig_GOOGL
+    #st.plotly_chart(GOOGL_chart(Stock_GOOGL_Stock0))
+    #Stock_GOOGL_Stock0=GOOGL_chart(Stock_GOOGL_Stock0)
+    #------------------------------------Mining data for stock:AMAZON------------------------------------------
+    AMZN_Stock=["AMZN"]
+    @st.cache
+    def AMZN_mining(AMZN_Stock):
+        Stock_AMZN_data=yf.download(AMZN_Stock, start ="2005-01-01", end = None)
+        Stock_AMZN_data.reset_index(inplace=True)
+        Stock_AMZN_data.rename(columns={"index": "Date"})
+        Stock_AMZN_data["Date"]=pd.to_datetime(Stock_AMZN_data["Date"], unit="s").dt.date
+        return Stock_AMZN_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    Stock_AMZN_Stock0= AMZN_mining(AMZN_Stock)
+    def AMZN_chart(Stock_AMZN_Stock0):
+        fig_AMZN=px.line(Stock_AMZN_Stock0, x="Date", y=["Adj Close", "Open", "Close", "High", "Low"], title="Amazon: 2005 - Present")
+        fig_AMZN.update_layout(legend_title="Features",
+                               width=1300, height=450,
+                               title_x=0.5, title_y=.85,
+                               plot_bgcolor='rgba(0,0,0,0)')
+        return fig_AMZN
+    #Stock_AMZN_Stock0=AMZN_chart(Stock_AMZN_Stock0)
+    #------------------------------------Mining data for stock:META------------------------------------------
+    META_Stock=["META"]
+    @st.cache
+    def META_mining(META_Stock):
+        Stock_META_data=yf.download(META_Stock, start ="2005-01-01", end = None)
+        Stock_META_data.reset_index(inplace=True)
+        Stock_META_data.rename(columns={"index": "Date"})
+        Stock_META_data["Date"]=pd.to_datetime(Stock_META_data["Date"], unit="s").dt.date
+        return Stock_META_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    Stock_META_Stock0= META_mining(META_Stock)
+    def META_chart(Stock_META_Stock0):
+        fig_META=px.line(Stock_META_Stock0, x="Date", y=["Adj Close", "Open", "Close", "High", "Low"], title="Meta: 2005 - Present")
+        fig_META.update_layout(legend_title="Features",
+                               width=1300, height=450,
+                               title_x=0.5, title_y=.85,
+                               plot_bgcolor='rgba(0,0,0,0)')
+        return fig_META
+    #Stock_META_Stock0=META_chart(Stock_META_Stock0)
+    #------------------------------------Mining data for stock:TSLA------------------------------------------
+    TSLA_Stock=["TSLA"]
+    @st.cache
+    def TSLA_mining(TSLA_Stock):
+        Stock_TSLA_data=yf.download(TSLA_Stock, start ="2005-01-01", end = None)
+        Stock_TSLA_data.reset_index(inplace=True)
+        Stock_TSLA_data.rename(columns={"index": "Date"})
+        Stock_TSLA_data["Date"]=pd.to_datetime(Stock_TSLA_data["Date"], unit="s").dt.date
+        return Stock_TSLA_data
+    #using streamlit call and print the function/using plotly, plot line chart incling paremeters
+    Stock_TSLA_Stock0=TSLA_mining(TSLA_Stock)
+    def TSLA_chart(Stock_TSLA_Stock0):
+        fig_TSLA=px.line(Stock_TSLA_Stock0, x="Date", y=["Adj Close", "Open", "Close", "High", "Low"], title="Tesla: 2005 - Present")
+        fig_TSLA.update_layout(legend_title="Features",
+                               width=1300, height=450,
+                               title_x=0.5, title_y=.85,
+                               plot_bgcolor='rgba(0,0,0,0)')
+        return fig_TSLA
+    #Stock_TSLA_Stock0=TSLA_chart(Stock_TSLA_Stock0)
+
+    #----------------------------------Create Drop down Buttons for indecies/Index Analysis--------------------------------------------------
+    #using streamlit module/def function create botton for each index
+    index_category=["Dow Jones","S&P500","Nasdaq"]
+    test0=st.multiselect("Equity Market: select 👇 for Time-series index analysis",index_category)
+    #insert Dow Jones option
+    if "Dow Jones" in test0:
+        #prep dataframes for metrics
+        DowCol_PreviousClosePrice,DowCol_OpenPrice,DowCol_Volume,DowCol_MrkCap=st.columns(4)
+        PreviousDow_price=IndexDJI_data0["Adj Close"].tail(1)
+        PreviousDow_price0=PreviousDow_price
+        PreviousDow_price=babel.numbers.format_currency(float(PreviousDow_price),"USD",locale='en_US')
+        OpenDow_price=IndexDJI_data0["Open"].tail(1)
+        OpenDow_price0=OpenDow_price
+        OpenDow_price=babel.numbers.format_currency(float(OpenDow_price),"USD",locale='en_US')
+        VolumeDow=IndexDJI_data0["Volume"].tail(1)
+        VolumeDow=babel.numbers.format_currency(float(VolumeDow),"USD",locale='en_US')
+        DowMarketcap="$9.67T"
+
+        #PerChngDow=(((PreviousDow_price0-OpenDow_price0)/PreviousDow_price0)*100)->format error
+
+        #Output Metrics
+        DowCol_PreviousClosePrice.metric("Previous Close:", PreviousDow_price)
+        DowCol_OpenPrice.metric("Open Price:", OpenDow_price)
+        DowCol_Volume.metric("Trading Volume:",VolumeDow)
+        DowCol_MrkCap.metric("MarketCap as of 2022-31-12",DowMarketcap)
+        #DowCol_PerChng.metric(label="∆ in Daily Price(%)",value=PerChngDow)->format error
+
+        #print line chart/analysis
+        st.plotly_chart(DJI_chart(IndexDJI_data0))
+
+        st.write("Dow Jones Analysis:")
+        #insert dow jones yearyly return
+        Dow_Return=pd.read_csv("DowJones_YearlyReturn.csv")
+        Dow_Return_fig=px.bar(Dow_Return, x="Year", y="Total Return", color="Total Return", title="Dow Jones Yearly Return : 1893 - 2023 | Percent | Yearly")
+        Dow_Return_fig.update_layout(legend_title="Features",width=1250,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
+        Dow_Return_fig.update_xaxes(showgrid=False, title="Date")
+        Dow_Return_fig.update_yaxes(showgrid=False, title="Percent")
+        #insert dropdown for data table and stats
+        Dow_dropdown_stats=st.expander(label="Dow Jones: Yearly Return and Index Statistics")
+        Dow_dropdown_stats.plotly_chart(Dow_Return_fig)
+        Dow_dropdown_stats.table(IndexDJI_data0.describe())
+
+        #insert analysis description
+        st.info("""
+        The Dow Jones Industrial Average, also known as the Dow 30 is the second-oldest equity index in the U.S. The Dow constitutes of 30 
+        public blue-chip companies traded on the New York Stock Exchange and the Nasdaq. The index was launched 
+        in 1896 by Charles Dow and Edward Jones. The index is well known throughout the world and is utilized by 
+        many investors to measure economic performance. The index includes a variety of top companies in numerous industries. 
+        Some of the companies include: 
+        * American Express 
+        * Boeing
+        * Cisco Systems
+        * Goldman Sachs
+        * Johnson & Johnson
+        The chart above indicates the Dow Jones has been positively performing since its inception in capital markets.
+        The lowest adjusted closing value of the index is 3,136.60 dollars on September 10, 1992. The highest adjusted closing 
+        value of the index is 36,799.64 dollars on April 1, 1992. On average the index has an adjusted closing value of 13,644.91 dollars
+        based on the available data. It is also important to note 75% of the adjusted closing values from 1992 to present are
+        17,388.03 dollars or bellow. This metrics indicates the index has experienced a significant positive moving average since its lowest 
+        adjusted value of 3,136.60 dollars in 1992. More specifically, the first dramatic pull-back of the index begin on October 9, 2007 with an 
+        adjusted closing value of 14,164.53 dollars and continued until March 9, 2009 with an adjusted closing value of 6,547.05 dollars. From October 9, 2007 
+        to March 9 2009, the index experienced a 53.77% retracement. On October 9, 2007, the equity markets, including Dow Jones rallied due to a Fed meeting 
+        supporting interest rate cut by the end of the year. This bullish sentiment was short lived according to the data in the chart above. The overrall market conditions 
+        during this time period were not favorable for institutions and retail investors. The Great Recession devalued capital markets during this time.
+        In those three years, the average 30-years fixed-mortgage rate was approximately 5.80% with 2007 being the highest (6.34%). According to 
+        Federal Reserve History, "the value of homes fell by approximately 30% on average from 2006 through mid-2009." Real GDP declined by 4.3% from its peak in 2007 to 
+        2009. Lastly unemployment rose from 5% in december 2007 to 10% by October 2009. The Great Recession which started in late 2006, was the biggest influence for the 
+        the Dow Jones's contraction from October 9, 2007 to March 9, 2009.
+        """)
+        #calculation for analysis above/stats
+        current=6547.05
+        previous=14164.53
+        percent_change=float(current-previous)/abs(previous)*100
+        #st.write(percent_change)
+        Avg_30_fixed=(6.34+6.03+5.04)/3
+        #st.write(Avg_30_fixed)
+
+        #insert figure button
+        DowJones_button=st.expander(label="Figure 1 : Dow Jones Index Time-series Analysis ")
+        DowJones_button.write("""
+        Datasource: Yahoo Finance
+        Technologies: PyCharm, Python; plotly express, pandas, streamlit""")
+    st.write("---")
+    #insert S&P500 option
+    if "S&P500" in test0:
+        #create 4 columns
+        SPCol_PreviousClosePrice,SPCol_OpenPrice,SPCol_Volume,SPCol_Mrkcap=st.columns(4)
+        #prep dataframes for metrics
+        PreviousSP_price=IndexGSPC_data0["Close"].tail(1)
+        PreviousSP_price0=PreviousSP_price
+        PreviousSP_price=babel.numbers.format_currency(float(PreviousSP_price),"USD",locale='en_US')
+        OpenSP_price=IndexGSPC_data0["Open"].tail(1)
+        OpenSP_price0=OpenSP_price
+        OpenSP_price=babel.numbers.format_currency(float(OpenSP_price),"USD",locale='en_US')
+        VolumeSP=IndexGSPC_data0["Volume"].tail(1)
+        VolumeSP=babel.numbers.format_currency(float(VolumeSP),"USD",locale='en_US')
+        SPmarketcap="$33.581T"
+        #PerChngDow=(((PreviousDow_price0-OpenDow_price0)/PreviousDow_price0)*100)->format error
+
+        #Output Metrics
+        SPCol_PreviousClosePrice.metric("Previous Close:", PreviousSP_price)
+        SPCol_OpenPrice.metric("Open Price:", OpenSP_price)
+        SPCol_Volume.metric("Trading Volume:",VolumeSP)
+        SPCol_Mrkcap.metric("MarketCap as of 2023-01-26:",SPmarketcap)
+        #DowCol_PerChng.metric(label="∆ in Daily Price(%)",value=PerChngDow)->format error
+
+        #print line chart/analysis
+        st.plotly_chart(GSPC_chart(IndexGSPC_data0))
+        #insert title
+        st.write("S&P 500 Analysis:")
+        #insert dow S&P 500 return
+        SP500_Return=pd.read_csv("S&P500_YearlyReturn.csv")
+        SP500_Return_fig=px.bar(SP500_Return, x="Year", y="Total Return", color="Total Return", title="S&P 500 Yearly Return : 1927 - 2023 | Percent | Yearly")
+        SP500_Return_fig.update_layout(legend_title="Features",width=1250,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
+        SP500_Return_fig.update_xaxes(showgrid=False, title="Date")
+        SP500_Return_fig.update_yaxes(showgrid=False, title="Percent")
+
+        #insert dropdown for data table and stats
+        SP500_dropdown_stats=st.expander(label="S&P 500: Yearly Return and Index Statistics")
+        SP500_dropdown_stats.plotly_chart(SP500_Return_fig)
+        SP500_dropdown_stats.table(IndexGSPC_data0.describe())
+        #insert analysis description
+        st.info("""
+        The Standard and Poor's 500 also known as the S&P 500, is one of the most commonly followed equity indices.
+        The S&P 500 is a market-capitalization-weighted index constituted of 500 large companies traded on the American stock exchanges.
+        Originally the S&P 500 was The Composite Index 90; representing 90 leading companies in the United States. Later in 1957,
+        the index grew to 500 companies. The market capitalization of the index is 33.587 trillion dollars as of 2023. Similar to 
+        the Dow Jones, the value of the S&P 500 performance is one of the tools used to gauge U.S. economic conditions and performance. There are many requirements 
+        to inter the index; including a market capitalization of 14.6 billion dollars and specified liquidity-based size. Some of the companies include:
+        * Warner Bros. Discovery Inc. Series A
+        * Carnival Corporation
+        * NVIDIA Corporation 
+        * United Airlines Holdings Inc.
+        * Netflix   
+        The chart above showcases the performance of the S&P 500 Index from 1990 to the present time. Similar to the Dow Jones, 
+        the S&P 500 has been positively performing since 1957. The lowest adjusted closing value of the index is 295.46 dollars
+        on October 11, 1990. The highest adjusted closing value of the index is 4,796.56 dollars on January 3rd, 2022. On average the 
+        index has an adjusted closing value of 1,507.09 based on the extracted from yahoo finance. 75% of the adjusted closing prices from 
+        1990 to year to day have a value of 1,957.16 dollars or lower. This metrics indicates the index has experienced a significant positive 
+        moving average since its lowest adjusted value of 295.46 dollars on October 11, 1990. The line chart displays the most significant devaluation
+        of the index from February 19, 2020 with an adjusted closing value of 3,386.15 dollars, to March 23, 2020 with an adjusted closing value of 2,237.40 dollars.
+        From February 19, 2020 to March 23, 2020, the index experienced a 33.92% retracement. This significant dilution of the equity index
+        was provoked by the Corona Virus crisis of 2019. Capital markets experienced a remarkable liquidity crunch due to lower gross domestic product(GDP) output. 
+        The U.S. GDP dropped from 21.92 trillion dollars on February 29, 2020 to 20.74 trillion dollars on March 31st, 2020 and continued to plummet for a few more months.
+        GDP fell by 5.33% while unemployment rose from 3.5% in February 2020 to 14.70% by April 2020. This had a significant impact on market conditions and economic output in the 
+        United States. The implementation of monetary policy and quantitative easing was imperative for the recovery of capital markets during this health crisis. COVID19 was responsible 
+        for the S&P 500's decline from February 19, 2020 to March 23, 2020.             
+        """)
+        #calculate % change during covid retracement
+        current1=2237.40
+        previous1=3386.15
+        percent_change1=float(current1-previous1)/abs(previous1)*100
+        #st.write(percent_change1)
+
+        #insert figure references button
+        SP500_button=st.expander(label="Figure 2.0 references : S&P500 Index Time-series Analysis ")
+        SP500_button.write("""
+        Datasource: Yahoo Finance
+        Technologies: PyCharm, Python; plotly express, pandas, streamlit""")
+
+    #insert NAsdaq option
+    if "Nasdaq" in test0:
+        #create 4 columns
+        NasdaqCol_PreviousClosePrice,NasdaqCol_OpenPrice,NasdaqCol_Volume,NasdaqCol_Mrkcap=st.columns(4)
+        #prep dataframes for metrics
+        PreviousNasdaq_price=IndexIXIC_data0["Close"].tail(1)
+        PreviousNasdaq_price0=PreviousNasdaq_price
+        PreviousNasdaq_price=babel.numbers.format_currency(float(PreviousNasdaq_price),"USD",locale='en_US')
+        OpenNasdaq_price=IndexIXIC_data0["Open"].tail(1)
+        OpenNasdaq_price0=OpenNasdaq_price
+        OpenNasdaq_price=babel.numbers.format_currency(float(OpenNasdaq_price),"USD",locale='en_US')
+        VolumeNasdaq=IndexIXIC_data0["Volume"].tail(1)
+        VolumeNasdaq=babel.numbers.format_currency(float(VolumeNasdaq),"USD",locale='en_US')
+        Nasdaqmarketcap="$16.2T"
+        #PerChngDow=(((PreviousDow_price0-OpenDow_price0)/PreviousDow_price0)*100)->format error
+
+        #Output Metrics
+        NasdaqCol_PreviousClosePrice.metric("Previous Close:", PreviousNasdaq_price)
+        NasdaqCol_OpenPrice.metric("Open Price:", OpenNasdaq_price)
+        NasdaqCol_Volume.metric("Trading Volume:",VolumeNasdaq)
+        NasdaqCol_Mrkcap.metric("MarketCap as of 2022-01-26:",Nasdaqmarketcap)
+        #DowCol_PerChng.metric(label="∆ in Daily Price(%)",value=PerChngDow)->format error
+        #print line chart/analysis
+        st.plotly_chart(IXIC_chart(IndexIXIC_data0))
+        #insert title
+        st.write("Nasdaq Analysis:")
+        #insert dow S&P 500 return
+        Nasda_Return=pd.read_csv("Nadsaq_YearlyReturn.csv")
+        Nasda_Return_fig=px.bar(Nasda_Return, x="Year", y="Total Return", color="Total Return", title="Nasday Yearly Return : 1990 - 2023 | Percent | Yearly")
+        Nasda_Return_fig.update_layout(legend_title="Features",width=1250,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
+        Nasda_Return_fig.update_xaxes(showgrid=False, title="Date")
+        Nasda_Return_fig.update_yaxes(showgrid=False, title="Percent")
+
+
+        #insert dropdown for data table and stats
+        Nasdaq_dropdown_stats=st.expander(label="Nasdaq: Yearly Return and Index Statistics")
+        Nasdaq_dropdown_stats.plotly_chart(Nasda_Return_fig)
+        Nasdaq_dropdown_stats.table(IndexIXIC_data0.describe())
+        st.info("""
+        The Nasdaq Composite Index, also known as The Nasdaq includes 3,642 companies which are listed on the Nasdaq Stock market.
+        The index was created in 1971 with a base value of 100. The do-com era boosted the index in terms of net return and increased its popularity.
+        The Nasdaq composite tracks domestic and international companies making the index one of the most widely followed market indices.
+        The index is heavily weighted towards information technology securities and has a market capitalization of 16.2 trillion dollars 
+        as of December 2022. Some of the companies in the index include:
+        * Apple
+        * Microsoft
+        * Amazon
+        * Meta
+        * Alphabet Class C (Google)
+        * Tesla 
+        The Chart above illustrates the performance of the Nasdaq Composite Index from 1990 to the present time. The index has 
+        experienced a positive return since it's inception similar to the Dow Jones and the S&P 500. The lowest adjusted 
+        closing value of the index is 325.40 dollars on October 16, 1990. The highest adjusted closing value of the index is 16,057.44
+        dollars on November 19, 2021. The average adjusted closing value since its inception in the capital market is 3,565.03 dollars. 
+        75% of the adjusted closing values from 1990 to year to day have a value of 4,564.75 dollars or lower. The Nasdaq has experienced
+        several dramatic contraction periods influenced by market conditions of the the do-com bubble (1995-2021), 2008 financial crisis (2006-2009) and the COVID19 Pandemic (2019-2021).
+        The effect of these events can be seen on the Time-series chart when zooming closing. During the do-com bubble, the index rallied
+        from 1995 with a peak value of 5,048.62 dollars and fell to 1,114.11 dollars on October 9, 2022. Market conditions of the do-come bubble cause the 
+        Nasdaq to fall by 77.93%. The next event which effected all capital markets world wide, especially the United States was the 2008 Financial 
+        Crisis. The Nasdaq fell from a peak of 2,815.67 dollars on October 31, 2007 to 1,265.52 dollars on March 9, 2009 signifying a 55.05% capital loss of the index. 
+        The Nasdaq soon recovered and experienced tremendous growth in price action and market capitalization. However, the COVID19 pandemic was another obstable 
+        for capital markets and its respective participants. The Nasdaq Index fell dramatically from a value of 9,817.17 dollars on Feburary 
+        19, 2020 to a value of 6,860.67 dollars on March 23, 2020. In 33 days the index fell by 33.11%, nearly one percent a day. Inflation rose 
+        above 2% by the end of 2021. The labor market was unfavorable with the unemployment rate rising from 3.5% to 14.7%. The gross domestic product output 
+        fell by 5.33% influencing capital loss and social challenges. In order to mitigate the economic downturn from worsening, the Federal Reserve employed monetary policies 
+        to stimulate the economy. On March 2020, the federal funds rate decreased to a range of 0% - 0.25% enabling cheap capital and more spending. Interest rates remained 
+        near 0 until unemployment rate was optimal for the economy. On March 15, 2020, The Fed announced the utilization of its QE tool to inject large some of liquity throught the purchased of 
+        500 billion dollars in Treasury securities and 200 billion dollars in government-guaranteed mortgage-backed securities. The Fed's actions along with the containment of the health crisis 
+        led to the recovery of Nasdaq Index and the rest of the equity market. From its last low value of 6,860.67 dollars on March 23, 2020, the index rallied to a peak of 16,057.44 dollars on November 19, 2021.
+        The Nasdaq's increase of 134.05% towards value recovery after such economic downturn indicates large volume of Fed liquidity and investor confidence in the capital and equity markets.      
+        """)
+        #calculate % change during do-com bubble
+        current2=1114.11
+        previous2=5048.62
+        percent_change2=float(current2-previous2)/abs(previous2)*100
+        #st.write(percent_change2)
+        #calculate % change during financial crisis
+        current3=1265.52
+        previous3=2815.67
+        percent_change3=float(current3-previous3)/abs(previous3)*100
+        #st.write(percent_change3)
+        #calculate % change during COVID19 Pandemic
+        current4=6860.67
+        previous4=9817.17
+        percent_change4=float(current4-previous4)/abs(previous4)*100
+        #st.write(percent_change4)
+        #calculate % change of rally after COVID19 Pandemic
+        current5=16057.44
+        previous5=6860.67
+        percent_change5=float(current4-previous5)/abs(previous5)*100
+        #st.write(percent_change4)
+
+        #insert figure references button
+        Nasdaq_button=st.expander(label="Figure 3.0 references : Nasdaq Index Time-series Analysis ")
+        Nasdaq_button.write("""
+        Datasource: Yahoo Finance
+        Technologies: PyCharm, Python; plotly express, pandas, streamlit""")
+
+    #--------------------------------Create Drop down Buttons for TopTechStock/Index Analysis--------------------------------------------------
+    TopTechStock_Category=["Apple","Microsoft","Google","Amazon","Meta","Tesla"]
+    test1=st.multiselect("Tech Stocks: Select 👇 for a comparison of Time-Series visualization",TopTechStock_Category)
+    if "Apple" in test1:
+        st.plotly_chart(AAPL_chart(Stock_AAPL_Stock0))
+    if "Microsoft" in test1:
+        st.plotly_chart(MSFT_chart(Stock_MSFT_Stock0))
+    if "Google" in test1:
+        st.plotly_chart(GOOGL_chart(Stock_GOOGL_Stock0))
+    if "Amazon" in test1:
+        st.plotly_chart(AMZN_chart(Stock_AMZN_Stock0))
+    if "Meta" in test1:
+        st.plotly_chart(META_chart(Stock_META_Stock0))
+    if "Tesla" in test1:
+        st.plotly_chart(TSLA_chart(Stock_TSLA_Stock0))
+
+    st.write("---")
+    #--------------------------------Create visualisation for Bond ETFs MrkCap-------------------------------
+    #extract data and prep dataframe
+    # Define the bond ticker symbol
+    bond_etfs = ['AGG','HYG', 'LQD',"TLT","SHY","IEF",]
+    #create empty dataframe to store the market cap values
+    market_cap_df = pd.DataFrame(columns=["ETF","Market Cap"])
+    #with for loop, get bond etfs informastion with yfinance
+    for etf in bond_etfs:
+        # Get the Bond ETF's information using yfinance
+        etf_info = yf.Ticker(etf)
+        # Extract the market cap from the ETF's information
+        market_cap = etf_info.fast_info["market_cap"]
+        # Add a new row to the DataFrame with the ETF's ticker and market cap
+        market_cap_df = market_cap_df.append({"ETF": etf, "Market Cap": market_cap}, ignore_index=True)
+    #st.dataframe(market_cap_df)
+    #Create bar visualization from prepped dataframe
+    Bond_MrkCap=market_cap_df
+    Bond_MrkCap=Bond_MrkCap.sort_values(by="Market Cap", ascending=False)
+    Bond_MrkCap_fig=px.bar(Bond_MrkCap, x="ETF", y="Market Cap", color="ETF", title=" Bond ETFs: Market Capitalization | ETFs")
+    Bond_MrkCap_fig.update_layout(legend_title="Features",width=1350,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
+    Bond_MrkCap_fig.update_xaxes(showgrid=False, title="ETFs")
+    Bond_MrkCap_fig.update_yaxes(showgrid=False, title="MarketCap")
+    st.plotly_chart(Bond_MrkCap_fig)
+
+    BOND_ETF_COLA,BOND_ETF_COLB=st.columns(2)
+    with BOND_ETF_COLA:
+        st.info("""
+        ishares Core U.S. Aggregate Bond ETF(AGG)
+        - Offers broad-based exposure to investment grade U.S. Bonds
+        - Structured for long-term portfolio strategy
+        - Includes hundreds of individual securities with the aim to mitigate illiquid challenges
+        ishares iboxx $ Investment Grade Corporate Bond ETF(LQD)
+        - Offers exposure to investment grade corporate bonds 
+        - Structured for long-term portfolio strategy
+        - Positive yield and low risk due to length of maturity
+        ishares 1-3 Year Treasury Bond ETF(SHY)
+        - Offers short-term maturity exposure 
+        - Structured for low expected return
+        - Offers exposure to securities 1-3 years to maturity
+        """)
+    with BOND_ETF_COLB:
+        st.info("""
+        ishares iboxx $ High Yield Corporate Bond ETF(HYG)
+        - Offers exposure to U.S. dollar-denominated high yield liquid corporate bon market
+        - High yield with high risk(higher potential for participants to default)
+        - Majority of the securities are corporate bonds rated between B and BB
+        ishares 7-10 Year Treasury Bond ETF(IEF)
+        - Offers exposure to treasury bonds securities 7-10 years to maturity 
+        - Offers higher return then short-term securities
+        - Moderate levels of risk
+        iShares 20+ Year Treasury Bond ETF(TLT)
+        - Offers exposure to long-dated securities with low credit risk 
+        - Offers higher liquidity exposure
+        - Efficient and cost effective
+        """)
+    st.write("---")
+    # #--------------------------------Create Drop down Buttons for TopTechStock/Index Analysis--------------------------------------------------
+    # TopTechStock_Category=["Apple","Microsoft","Google","Amazon","Meta","Tesla"]
+    # test1=st.multiselect("Tech Stocks: Select 👇 for a comparison of Time-Series visualization",TopTechStock_Category)
+    # if "Apple" in test1:
+    #     st.plotly_chart(AAPL_chart(Stock_AAPL_Stock0))
+    # if "Microsoft" in test1:
+    #     st.plotly_chart(MSFT_chart(Stock_MSFT_Stock0))
+    # if "Google" in test1:
+    #     st.plotly_chart(GOOGL_chart(Stock_GOOGL_Stock0))
+    # if "Amazon" in test1:
+    #     st.plotly_chart(AMZN_chart(Stock_AMZN_Stock0))
+    # if "Meta" in test1:
+    #     st.plotly_chart(META_chart(Stock_META_Stock0))
+    # if "Tesla" in test1:
+    #     st.plotly_chart(TSLA_chart(Stock_TSLA_Stock0))
+    #insert figure button
+    REFERENCES=st.expander(label="References")
+    REFERENCES.write("""
+        Datasource: Yahoo Finance, FRED
+        
+        Technologies: PyCharm, Python; plotly express, pandas, streamlit, Excel
+        
+        [https://data.oecd.org/unemp/unemployment-rate.htm](https://data.oecd.org/unemp/unemployment-rate.htm)
+        
+        [https://data.bls.gov/timeseries/LNS14000000](https://data.bls.gov/timeseries/LNS14000000)
+        
+        [https://ycharts.com/indicators/us_monthly_gdp](https://ycharts.com/indicators/us_monthly_gdp) 
+        
+        [https://www.macrotrends.net/2623/nasdaq-by-year-historical-annual-returns](https://www.macrotrends.net/2623/nasdaq-by-year-historical-annual-returns) 
+        
+        [https://www.slickcharts.com/dowjones/returns](https://www.slickcharts.com/dowjones/returns)
+        
+        [https://www.google.com/finance/quote/.INX:INDEXSP?hl=en](https://www.google.com/finance/quote/.INX:INDEXSP?hl=en)
+        
+        [https://www.federalreservehistory.org/essays/great-recession-of-200709#:~:text=The financial effects of the,its trough in March 2009](https://www.federalreservehistory.org/essays/great-recession-of-200709#:~:text=The%20financial%20effects%20of%20the,its%20trough%20in%20March%202009). 
+        
+        [https://fred.stlouisfed.org/series/MORTGAGE30US](https://fred.stlouisfed.org/series/MORTGAGE30US)
+        
+        [https://fred.stlouisfed.org/series/FEDFUNDS](https://fred.stlouisfed.org/series/FEDFUNDS)  
+        
+        [https://fred.stlouisfed.org/series/GDP](https://fred.stlouisfed.org/series/GDP)   
+        
+        [https://money.cnn.com/2007/10/09/markets/markets_0500/](https://money.cnn.com/2007/10/09/markets/markets_0500/)   
+        
+        [https://www.elearnmarkets.com/blog/5-instruments-of-capital-market/](https://www.elearnmarkets.com/blog/5-instruments-of-capital-market/)
+        
+        [https://en.wikipedia.org/wiki/Nasdaq#cite_note-2](https://en.wikipedia.org/wiki/Nasdaq#cite_note-2)    
+        
+        [https://focus.world-exchanges.org/issue/february-2023/market-statistics](https://focus.world-exchanges.org/issue/february-2023/market-statistics)  
+        
+        [https://indexes.nasdaqomx.com/Index/Overview/COMP](https://indexes.nasdaqomx.com/Index/Overview/COMP)  
+        
+        [https://indexes.nasdaqomx.com/Index/Weighting/COMP](https://indexes.nasdaqomx.com/Index/Weighting/COMP)   
+        
+        [https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average](https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average)  
+        
+        [https://companiesmarketcap.com/usa/largest-companies-in-the-usa-by-market-cap/](https://companiesmarketcap.com/usa/largest-companies-in-the-usa-by-market-cap/)
+        
+        [https://www.investopedia.com/terms/s/sp500.asp](https://www.investopedia.com/terms/s/sp500.asp)  
+        
+        [https://www.sifma.org/resources/research/fact-book/](https://www.sifma.org/resources/research/fact-book/)
+            
+        https://etfdb.com/etf/TLT/
+        """)
+    st.info("""
+    DISCLAIMER: The production of this analysis is solely for educational purposes. The data used to explain certain events 
+    is subject to change, and the analysis is not intended to be used as an investment tool. If this analysis is used for any other purpose, the author is not liable.
+     
+    """)
+
+
+
 ########################################################################################################################
 ########################################################################################################################
 ########################################################################################################################
