@@ -805,7 +805,7 @@ if Nav_Menu == "Capital Markets Analysis":
     #Create bar visualization from prepped dataframe
     Bond_MrkCap=market_cap_df
     Bond_MrkCap=Bond_MrkCap.sort_values(by="Market Cap", ascending=False)
-    Bond_MrkCap_fig=px.bar(Bond_MrkCap, x="ETF", y="Market Cap", color="ETF", title=" Bond ETFs: Market Capitalization | ETFs")
+    Bond_MrkCap_fig=px.line(Bond_MrkCap, x="ETF", y="Market Cap", color="ETF", title=" Bond ETFs: Market Capitalization | ETFs")
     Bond_MrkCap_fig.update_layout(legend_title="Features",width=1350,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
     Bond_MrkCap_fig.update_xaxes(showgrid=False, title="ETFs")
     Bond_MrkCap_fig.update_yaxes(showgrid=False, title="MarketCap")
