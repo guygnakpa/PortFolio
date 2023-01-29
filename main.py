@@ -799,6 +799,8 @@ if Nav_Menu == "Capital Markets Analysis":
         etf_info = yf.Ticker(etf)
         # Extract the market cap from the ETF's information
         market_cap = etf_info.fast_info["market_cap"]
+        market_cap=pd.DataFrame(market_cap)
+        st.dataframe(market_cap)
         # Add a new row to the DataFrame with the ETF's ticker and market cap
         market_cap_df = market_cap_df.append({"ETF": etf, "Market Cap": market_cap}, ignore_index=True)
     st.dataframe(market_cap_df)
