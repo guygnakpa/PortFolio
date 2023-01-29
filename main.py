@@ -790,7 +790,7 @@ if Nav_Menu == "Capital Markets Analysis":
     #--------------------------------Create visualisation for Bond ETFs MrkCap-------------------------------
     #extract data and prep dataframe
     # Define the bond ticker symbol
-    bond_etfs = ['AGG','HYG', 'LQD',"TLT","SHY","IEF",]
+    bond_etfs = ['AGG','HYG','LQD',"TLT","SHY","IEF",]
     #create empty dataframe to store the market cap values
     market_cap_df = pd.DataFrame(columns=["ETF","Market Cap"])
     #with for loop, get bond etfs informastion with yfinance
