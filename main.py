@@ -6,6 +6,7 @@ from PIL import Image
 from sklearn.impute import KNNImputer
 from pycoingecko import CoinGeckoAPI
 import streamlit.components.v1 as components
+from pandas_datareader import data as pdr
 import pandas as pd
 import numpy as np
 from plotly.subplots import make_subplots
@@ -790,23 +791,24 @@ if Nav_Menu == "Capital Markets Analysis":
     #--------------------------------Create visualisation for Bond ETFs MrkCap-------------------------------
     #extract data and prep dataframe
     # Define the bond ticker symbol
-    bond_etfs = ['AGG','HYG','LQD',"TLT","SHY","IEF",]
+    bond_etfs = ['AGG','HYG','LQD',"TLT","SHY","IEF"]
+    market_cap=pdr.get_quote_yahoo(bond_etfs)["marketCap"]
     #create empty dataframe to store the market cap values
-    market_cap_df = pd.DataFrame(columns=["ETF","Market Cap"])
+    #market_cap_df = pd.DataFrame(columns=["ETF","Market Cap"])
     #with for loop, get bond etfs informastion with yfinance
-    for etf in bond_etfs:
-        # Get the Bond ETF's information using yfinance
-        etf_info = yf.Ticker(etf)
-        # Extract the market cap from the ETF's information
-        market_cap = etf_info.fast_info["market_cap"]
-        #st.write(market_cap)
-        # Add a new row to the DataFrame with the ETF's ticker and market cap
-        market_cap_df = market_cap_df.append({"ETF": etf, "Market Cap": market_cap}, ignore_index=True)
-    #st.dataframe(market_cap_df)
+    # for etf in bond_etfs:
+    #     # Get the Bond ETF's information using yfinance
+    #     etf_info = yf.Ticker(etf)
+    #     # Extract the market cap from the ETF's information
+    #     market_cap = etf_info.fast_info["market_cap"]
+    #     #st.write(market_cap)
+    #     # Add a new row to the DataFrame with the ETF's ticker and market cap
+    #     market_cap_df = market_cap_df.append({"ETF": etf, "Market Cap": market_cap}, ignore_index=True)
+    st.dataframe(market_cap)
     #Create bar visualization from prepped dataframe
-    Bond_MrkCap=market_cap_df
-    Bond_MrkCap=Bond_MrkCap.sort_values(by="Market Cap", ascending=False)
-    Bond_MrkCap_fig=px.bar(Bond_MrkCap, x="ETF", y="Market Cap", color="ETF", title=" Bond ETFs: Market Capitalization | ETFs")
+    Bond_MrkCap=pd.DataFrame(market_cap)
+    Bond_MrkCap=Bond_MrkCap.sort_values(by="marketCap", ascending=False)
+    Bond_MrkCap_fig=px.bar(Bond_MrkCap, x=Bond_MrkCap.index, y="marketCap", color=Bond_MrkCap.index, title=" Bond ETFs: Market Capitalization | ETFs")
     Bond_MrkCap_fig.update_layout(legend_title="Features",width=1350,height=450,title_x=0.5, title_y=.85, plot_bgcolor='rgba(0,0,0,0)')
     Bond_MrkCap_fig.update_xaxes(showgrid=False, title="ETFs")
     Bond_MrkCap_fig.update_yaxes(showgrid=False, title="MarketCap")

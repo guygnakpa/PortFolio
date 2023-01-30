@@ -12,3 +12,4 @@ plotly-express==0.4.1
 statsmodels==0.13.2
 openpyxl==3.0.10
 yfinance==0.2.9
+pandas-datareader==0.10.0
