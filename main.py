@@ -793,18 +793,7 @@ if Nav_Menu == "Capital Markets Analysis":
     # Define the bond ticker symbol
     bond_etfs = ['AGG','HYG','LQD',"TLT","SHY","IEF"]
     market_cap=pdr.get_quote_yahoo(bond_etfs)["marketCap"]
-    #create empty dataframe to store the market cap values
-    #market_cap_df = pd.DataFrame(columns=["ETF","Market Cap"])
-    #with for loop, get bond etfs informastion with yfinance
-    # for etf in bond_etfs:
-    #     # Get the Bond ETF's information using yfinance
-    #     etf_info = yf.Ticker(etf)
-    #     # Extract the market cap from the ETF's information
-    #     market_cap = etf_info.fast_info["market_cap"]
-    #     #st.write(market_cap)
-    #     # Add a new row to the DataFrame with the ETF's ticker and market cap
-    #     market_cap_df = market_cap_df.append({"ETF": etf, "Market Cap": market_cap}, ignore_index=True)
-    st.dataframe(market_cap)
+    #st.dataframe(market_cap)
     #Create bar visualization from prepped dataframe
     Bond_MrkCap=pd.DataFrame(market_cap)
     Bond_MrkCap=Bond_MrkCap.sort_values(by="marketCap", ascending=False)
