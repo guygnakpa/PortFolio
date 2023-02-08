@@ -1,0 +1,97 @@
+﻿Rank,Suspicious Activity Type,Filings (Overall),Percentage (Overall)
+91,Unclear or no insurable interest,1,Less than 1%
+91,Unknown source of chips*,1,Less than 1%
+90,Chip walking*,2,Less than 1%
+90,Reverse mortgage fraud†,2,Less than 1%
+89,Minimal gaming with large transactions,3,Less than 1%
+88,"Suspicious life settlement sales insurance (e.g., STOLI's, Viaticals)",4,Less than 1%
+87,Human smuggling*,5,Less than 1%
+87,Origination fraud*,5,Less than 1%
+87,Suspicious intra-casino funds transfers†,5,Less than 1%
+86,Appraisal fraud,6,Less than 1%
+85,Excessive insurance,10,Less than 1%
+84,Foreclosure/Short sale fraud ,12,Less than 1%
+83,Exchanges small bills for large bills or vice versa,17,Less than 1%
+82,Loan modification fraud,18,Less than 1%
+82,Suspicious use of counter checks or markers,18,Less than 1%
+81,Proceeds sent to unrelated third party,27,Less than 1%
+80,Excessive or unusual cash borrowing against policy/annuity,29,Less than 1%
+79,"Misuse of ""free look""/cooling-off/right of rescission†",30,Less than 1%
+78,Customer cancels transaction to avoid BSA reporting and recordkeeping requirements†,50,Less than 1%
+77,Human trafficking*,51,Less than 1%
+76,Suspicious termination of policy or contract,57,Less than 1%
+75,Known or suspected terrorist/terrorist organization,60,Less than 1%
+74,Terrorist Financing - Other,63,Less than 1%
+73,Insurance - Other,69,Less than 1%
+72,Trade Based Money Laundering/Black Market Peso Exchange,115,Less than 1%
+71,Unauthorized pooling,121,Less than 1%
+70,Pyramid scheme,130,Less than 1%
+69,Application fraud*,153,Less than 1%
+68,Suspicious use of informal value transfer system,155,Less than 1%
+67,Ponzi scheme*,162,Less than 1%
+66,Suspicion concerning the physical condition of funds,186,Less than 1%
+65,Healthcare/Public or private health insurance ,188,Less than 1%
+64,Suspicious inquiry by customer regarding BSA reporting or recordkeeping requirements,234,Less than 1%
+63,Bribery or gratuity,292,Less than 1%
+62,Suspected public/private corruption (domestic),314,Less than 1%
+61,Suspicious exchange of currencies,367,Less than 1%
+60,Changes spelling or arrangement of name,415,Less than 1%
+59,Misappropriation,429,Less than 1%
+58,Mortgage Fraud - Other,610,Less than 1%
+57,Unlicensed or unregistered MSB,624,Less than 1%
+56,Advance fee*,629,Less than 1%
+55,Suspected public/private corruption (foreign),696,Less than 1%
+54,Alters or  cancels transaction to avoid BSA recordkeeping requirement ,701,Less than 1%
+53,Business loan,819,Less than 1%
+52,Single individual with multiple identities,898,Less than 1%
+51,Cyber Event - Other*,924,Less than 1%
+50,Transaction(s) involving foreign high risk jurisdiction*,983,Less than 1%
+49,Consumer loan,996,Less than 1%
+48,Against financial institution(s)*,"1,046",Less than 1%
+47,"Suspicious designation of beneficiaries, assignees or joint owners","1,092",Less than 1%
+46,Identification Documentation - Other,"1,106",Less than 1%
+45,Funnel account*,"1,240",Less than 1%
+44,Suspicious use of noncash monetary instruments,"1,263",Less than 1%
+43,Suspicious use of third-party transactors (straw-man),"1,416",Less than 1%
+42,Structuring - Other,"1,424",Less than 1%
+41,Gaming Activities - Other,"1,474",Less than 1%
+40,Suspicious use of multiple transaction locations,"1,729",Less than 1%
+39,Multiple individuals with same or similar identities,"1,983",Less than 1%
+38,Wash trading*,"2,262",Less than 1%
+37,Provided questionable or false identification*,"2,448",Less than 1%
+36,Alters or cancels transaction to avoid CTR requirement ,"3,078",Less than 1%
+35,Mass-marketing,"3,087",Less than 1%
+34,Refused or avoided request for documentation,"3,201",Less than 1%
+33,Transaction(s) below BSA recordkeeping threshold ,"3,302",Less than 1%
+32,Money Laundering - Other,"3,674",Less than 1%
+31,Misuse of position or self-dealing,"3,764",Less than 1%
+30,Counterfeit Instruments,"5,982",Less than 1%
+29,"Little or no concern for product performance penalties, fees, or tax consequences","6,016",Less than 1%
+28,Market manipulation*,"6,333",Less than 1%
+27,Market manipulation/Wash trading†,"6,454",Less than 1%
+26,Suspicious receipt of government payments/benefits,"6,655",Less than 1%
+25,Unauthorized electronic intrusion†,"7,170",1.05%
+24,Provided questionable or false documentation,"7,294",1.07%
+23,Securities fraud*,"7,837",1.15%
+22,Mail,"7,921",1.16%
+21,Forgeries,"8,270",1.21%
+20,Transaction out of pattern for customer(s),"9,171",1.34%
+19,Transaction(s) below CTR threshold ,"9,826",1.44%
+18,Against financial institution customer(s)*,"10,354",1.52%
+17,Insider trading,"13,966",2.04%
+16,Credit/Debit card,"15,607",2.28%
+15,Elder financial exploitation,"16,046",2.35%
+14,Two or more individuals working together,"17,269",2.53%
+13,Suspicious use of multiple accounts,"19,589",2.87%
+12,Other Suspicious Activities - Other,"21,295",3.12%
+11,Embezzlement/theft/disappearance of funds,"23,858",3.49%
+10,Securities/Futures/Options - Other,"26,459",3.87%
+9,Fraud - Other,"27,453",4.02%
+8,Suspicious EFT/wire transfers,"33,794",4.95%
+7,Account takeover,"35,241",5.16%
+6,Check,"35,529",5.20%
+5,Suspicion concerning the source of funds,"36,009",5.27%
+4,"Transaction with no apparent economic, business, or lawful purpose","42,951",6.29%
+3,Wire,"52,759",7.72%
+2,Identity theft,"54,968",8.04%
+1,ACH,"60,942",8.92%
