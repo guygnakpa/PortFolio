@@ -486,15 +486,16 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
         - The overall filings for Identity theft is 54,968, making up 8.04% of the total distribution.
         - "Wire" fraud is responsible for 52,968 suspicious activity filings in the securities and futures industry. It is 7.72% of the total distribution.       
     """)
-    Securities_Futures_DF=pd.read_csv("SAR_Securities_Futures_Industry.csv")
-    Securities_Futures_DF=Securities_Futures_DF.drop(Securities_Futures_DF.index[-1])
-    #st.dataframe(Securities_Futures_DF)
-
     SecuritiesFutures_Type_DF=pd.read_csv("SAR_SecuritiesFutures_Type.csv")
     #SecuritiesFutures_Type_DF=SecuritiesFutures_Type_DF.drop(Securities_Futures_DF.index[-1])
-    st.dataframe(SecuritiesFutures_Type_DF)
+    #insert figure references button
+    SecuritiesFuturess_button=st.expander(label="Expand to see data table of Securities and Futures ")
+    SecuritiesFuturess_button.dataframe(SecuritiesFutures_Type_DF)
 
-    SecuritiesFutures_Type_fig=px.bar(SecuritiesFutures_Type_DF,
+
+    SecuritiesFutures_Type_DF2=SecuritiesFutures_Type_DF
+    SecuritiesFutures_Type_DF2.sort_values(by="Rank",ascending=True, inplace=True)
+    SecuritiesFutures_Type_fig=px.bar(SecuritiesFutures_Type_DF2,
                                       x="Suspicious Activity Type",
                                       y="Filings (Overall)",
                                       title="Number of Filings by Type of Suspicious Activity from Securities/Futures Industry:January 1, 2014 - December 31, 2021")
