@@ -374,12 +374,15 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     """)
     st.write("---")
     #insert title and body of suspicious activity report
-    st.subheader("Suspicious Activity Report(SAR) Analysis")
+    st.subheader("Suspicious Activity Report(SARs) Analysis")
     st.info("""
     - The compliance division is the second line of defence against any illicit activities.
-    - Per regulations, the division must monitor, and report any suspicious activities under the bank's supervision. 
-    - The Global Financial Crimes sub-division of the compliance department is responsible for monitoring and reporting metrics associated with financial crimes. In addition, any found evidence of illicit activity must be filed with the respective regulatory agency. 
-    - Blow is an analysis of Suspicious Activity Report(SAR) filed by entities in the Depository and Securities/Futures industry. 
+    - Within compliance exist a sub-division, Global Financial Crimes(GFC), responsible for governing and escalating any activity behaving against the internal compliance program.
+    - The GFC program is a set of policies associated with the enforcement of Bank Secrecy Act, AML, Anti-Corruption, Anti-Tax Evasion, Economic Sanctions,, and Political Contributions. 
+    - Per regulations, the GFC sub-division must monitor, investigate and report any suspicious activities. The GFC employs a number of risk measures to adhere to the laws and regulations.   
+    - One of the control methods to mitigate potential risk factors associated with regulations and internal policies is a standard of metrics reporting. 
+    - The metrics reporting can aid all departments, including the business unit, and chairman committee to better understand existing threats to the bank. 
+    - Below is an analysis of Suspicious Activity Report(SARs) filed by entities in the Depository and Securities/Futures industry. 
     - The visualizations highlight key metrics within the data provided by Financial Crimes Enforcement Network(FinCEN)
     """)
 
