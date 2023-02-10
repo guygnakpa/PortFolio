@@ -243,11 +243,11 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     st.write("<div style='text-align:justify'> ""\n"
              "The global banking industry market has grown significantly over the past decades. As of Q3 2021, the industry had an estimated "
              "market capitalization of ~$8.36 trillion. The industry had an increase of 44.13% from its previous valuation in Q3 2020 (~$5.80 trillion), (Abby McCain, Zippia.com). "
-             "The trend suggests the market will continue to show signs of positive growth over the coming years. The industry growth has led higher number of human capital "
+             "The trend suggests the market will continue to show signs of positive growth over the coming years. The industry growth has led to a higher number of human capital "
              "to adequately satisfy the increasing number of clients. Digital transformation initiatives have been adopted to create efficiency within processes. "
-             "Although the growth has positively effected earnings, global banking institutions face many challenges. The most evolving and important challenge is regulatory compliance "
+             "Although the growth has positively effected earnings, the global banking institutions face many challenges. The most evolving and important challenge is regulatory compliance "
              """due to a large number of risk factors. According to Mckinsey, "since 2009, regulatory fees have dramatically increase relative to bank's earnings"(Piotr Kaminski, mckinsey.com). """
-             "This suggests the level of risk factors are continuously creating evolving challenges for the compliance department in many of the global banking institutions. "
+             "This suggests the level of risk factors are continuously creating evolving challenges for the compliance department in many of the global banks. "
              ,unsafe_allow_html=True)
 
     #insert expander for earnings vs fine and settlements.
@@ -257,9 +257,9 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     #insert Purpose title and body
     st.header("Purpose")
     st.write("<div style='text-align:justify'> ""\n"
-             "The objective of this documentation is to highlight the role of regulatory compliance and governance in banking, financial regulatory authorities, "
-             "risk factors in banking, and relevant risk management systems. The subcategory of regulatory compliance in banking, Global Financial Crimes unit, will be mainly expolored. "
-             "Further, an analysis of suspicious activity report(SAR) will be inclused to showcase "
+             "The objective of this document is to highlight the role of regulatory compliance and governance in banking, financial regulatory authorities, "
+             "risk factors in banking, and relevant risk management systems. The sub division of regulatory compliance in banking, Global Financial Crimes unit, will be the main focus. "
+             "Further, an analysis of suspicious activity report(SAR) will be included to showcase "
              "and quantify challenges many financial institutions continuously face. "
              ,unsafe_allow_html=True)
     st.write("")
@@ -267,11 +267,11 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     #insert first point title and body
     st.subheader("Regulatory compliance and governance in banking")
     st.write("<div style='text-align:justify'> ""\n"
-             "The compliance department hold a huge responsibility in the structure of a global bank. "
+             "The compliance department has a huge responsibility in the structure of a global banking. "
              "Although the compliance division consist of many functions, they all lead to a central goal; risk management. "
-             "In the banking structure the compliance division is the second line of of defence for managing numerious diverse risk factors. "
+             "In the banking structure the compliance division is the second line of defence for managing numerious diverse risk factors. "
              "The division must ensure the bank operates according to domestic and internal regulations. In addition, the divison is tasked to "
-             "create, govern, monitor and revise compliance program and internal bank policy. Any suspicious fiancial activities are monitored and reported to financial regulators "
+             "create, govern, monitor and revise compliance program and internal bank policy. Any suspicious financial activity is monitored and reported to financial regulators "
              "by the compliance department on behalf of the bank. Below are some of the core functions of the compliance(GFC) division but not limited to: "
              ,unsafe_allow_html=True)
     #insert core functions of the compliance division
@@ -285,8 +285,8 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     - Anti-Money Laundering
         - 
         - regulations and procedures in place to prevent the efforts of concealing illicit funds as legitimate income. Regulators required transaction of $10,000 or more to be reported. Futher, it is required to conduct due diligence on customers through the process of Know Your Customer(KYC).
-        - KYC enables for banks to better identity new clients, the nature of their activities, and clarification on the source of funds. KYC ensure customers are not part of a crimal organization, under economic sanctions by U.S regulators, nor politically affiliated.
-        - Anti-money laundering and KYC procedures begin with the Bank Secrecy Act(1970), and are now part of The Anti-Money Laundering Act of 2020 in order to keep up with the increase of illicit activities. This law is engoreced by The Department of the Treasury, especifically the bureau of Financial Crimes Enforcement Network(FinCEN).  
+        - KYC enables for banks to better identity new clients, the nature of their activities, and clarification on the source of funds. KYC ensure customers are not part of a criminal organization, under economic sanctions by U.S regulators, nor politically affiliated.
+        - Anti-money laundering and KYC procedures begin with the Bank Secrecy Act(1970), and are now part of The Anti-Money Laundering Act of 2020 in order to keep up with the increase of illicit activities. This law is enforeced by The Department of the Treasury, specifically the bureau of Financial Crimes Enforcement Network(FinCEN).  
     - Anti-Tax Evasion
         -
         - regulations and procedures in place to prevent, detect and monitor suspicious activities associated with tax evasion. The objective of these procedures is to prevent tax avoidance and promote integrity within the financial system.   
@@ -297,8 +297,8 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
         - Anti-Boycott Act of 2018 is part of the Export Control Reform Act of 2018 (ECRA). This law is enforced by the Bureau of Industry and Security(BIS).
     - Economic Sanctions - OFAC
         -
-        - regulations and procedures in place to monitor and prevent economic transactions with individuals, entities or countries who are sanctions by U.S regulators. The policies in play help metigate risks associated with banking operations, national security and froeign policy.  
-        - The Office of Foreign Assets Control(OFAC) division in the U.S. Treasury Department is responsible for enforcing this regulation. OFAC impose economic sanctions against specific countries, terrorist and crimical organizations.  
+        - regulations and procedures in place to monitor and prevent economic transactions with individuals, entities or countries who are sanctions by U.S regulators. The policies in place help metigate risks associated with banking operations, national security and froeign policy.  
+        - The Office of Foreign Assets Control(OFAC) division in the U.S. Treasury Department is responsible for enforcing this regulation. OFAC impose economic sanctions against specific countries, terrorists and crimical organizations.  
     - Political Contributions
         -
         - regulations and procedures in place to monitor and prevent corruption associated with financial donation in order to gain political influence.  
@@ -309,7 +309,7 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     st.write("<div style='text-align:justify'> ""\n"
              "Global financial institutions are regulated by many U.S and international agencies based on the banking structure. "
              "Below are a list of U.S. agencies who are responsible for the prevention of fraud and maintaining fairness, integrity, and accountibility in banking. "
-             "Use the expand buttons below to see specific regulatory bodies responsible to enforce, govern and monitor the banking and security industry "
+             "Use the expand buttons below to see specific regulatory bodies responsible to enforce, govern and monitor the banking and securities industry "
              ,unsafe_allow_html=True)
     st.write("")
     #insert expander button for each type of regulators
@@ -322,7 +322,7 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     - National Credit Union Administration (NCUA)
     - Farm Credit Administration (FCA)
     - Federal Financial Institutions Examination Council (FFIEC) - main umbrella group for US Federal banking authorities
-    - Conference of State Bank Supervisors (CSBS) [4] - main umbrella group representing US State and Territorial banking supervisors
+    - Conference of State Bank Supervisors (CSBS) - main umbrella group representing US State and Territorial banking supervisors
     """)
     Securities_Regulators=st.expander(label="Expand to see the relevant securities regulators")
     Securities_Regulators.info("""
@@ -331,7 +331,7 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     - Securities Investor Protection Corporation (SIPC)
     - Financial Industry Regulatory Authority (FINRA)
     - Municipal Securities Rulemaking Board (MSRB)
-    - National Futures Association (NFA)[5]
+    - National Futures Association (NFA)
     """)
     Other_Regulators=st.expander(label="Expand to see other relevant regulators")
     Other_Regulators.info("""
@@ -345,7 +345,7 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     #insert risk factors in banking
     st.subheader("Risk factors")
     st.write("<div style='text-align:justify'> ""\n"
-             "More than ever banks are facing many challenges that are placing more pressure on compliance divisions to better operate "
+             "More than ever banks are facing many challenges that are placing more pressure on compliance division to better operate "
              "with integrity and adhere to applicable laws, regulations and internal policies. Aside from the compliance department's core functions of "
              "enforcing Anti-Money Laundering(AML), Anti-Corruption, Anti-Tax Evasion, Economic Sanctions, and Political Contribution regulatory requirements, many other "
              "risk factors must be mitigated. Below are many other risk factors a compliance division may be faced with."
@@ -358,17 +358,17 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     - Compliance Cost
     - Regulatory change
     - Digital transformation risk
-    - Hybrid work environments risk 
+    - Hybrid work environment risk 
     - Legal and regulatory penalties
     """)
     #insert relevant risk management systems for growing risk factors
     st.subheader("Risk management systems")
     st.info("""
     - Continue to implement adequate procedures to govern, monitor and report suspicious activity related to anti-money laundering, anti-tax evasion, anti-corruption, economic sanctions, and political contributions.   
-    - Implement quality specialised training programs to better educate employees on relevant and evolving regulations.  
+    - Implement quality specialized training programs to better educate employees on relevant and evolving regulations.  
     - Continue to conduct internal audit, review and address compliance policies to identify inefficiencies that can lead to potencial risks.  
     - Implementing a more advance monitoring and reporting system to recognize and address risk factors associated with regulatory violation. 
-    - Increase the use of data analysis to better understand trends associated with internal policies performance and financial activities. 
+    - Increase the use of data analysis to better understand trends associated with internal policy performance and financial activities. 
     - Increase reporting to senior management and the Board of Directors on compliance-related risks and the effectiveness of risk management measures. 
     - Improve relationships with regulatory agencies to stay informed on evolving laws and regulations. 
     """)
@@ -378,12 +378,12 @@ if Nav_Menu == "GFC & Regulatory Compliance Analysis":
     st.info("""
     - The compliance division is the second line of defence against any illicit activities.
     - Within compliance exist a sub-division, Global Financial Crimes(GFC), responsible for governing and escalating any activity behaving against the internal compliance program.
-    - The GFC program is a set of policies associated with the enforcement of Bank Secrecy Act, AML, Anti-Corruption, Anti-Tax Evasion, Economic Sanctions,, and Political Contributions. 
-    - Per regulations, the GFC sub-division must monitor, investigate and report any suspicious activities. The GFC employs a number of risk measures to adhere to the laws and regulations.   
+    - The GFC program is a set of policies associated with the enforcement of Bank Secrecy Act, AML, Anti-Corruption, Anti-Tax Evasion, Economic Sanctions, and Political Contributions. 
+    - Per regulations, the GFC sub-division must monitor, investigate and report any suspicious activity. The GFC employs a number of risk measures to adhere to the laws and regulations.   
     - One of the control methods to mitigate potential risk factors associated with regulations and internal policies is a standard of metrics reporting. 
     - The metrics reporting can aid all departments, including the business unit, and chairman committee to better understand existing threats to the bank. 
     - Below is an analysis of Suspicious Activity Report(SARs) filed by entities in the Depository and Securities/Futures industry. 
-    - The visualizations highlight key metrics within the data provided by Financial Crimes Enforcement Network(FinCEN)
+    - The visualizations highlight key metrics within the data provided by the Financial Crimes Enforcement Network(FinCEN)
     """)
 
 
