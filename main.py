@@ -28,14 +28,24 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 #_____________________________________________________________
 #Insert navigation bar menu
-Nav_Menu=option_menu(None,["Resume","GFC & Regulatory Compliance Analysis",
-                           "Capital Markets Analysis","Stablecoins Analysis","Geography of Cryptocurrency Report",
-                           "DeFi Liquidity Aggregator","SQL Business Analysis","System Architecture Analysis",
-                           "Financial & Marketing Analysis","Business Ethics Analysis"],
-                     icons=['house','briefcase-fill','bank', 'currency-bitcoin', 'pin-map-fill', 'droplet-half',
-                            'bar-chart-fill','cpu-fill', 'activity', 'credit-card-2-back'],
-                     default_index=0,
-                     orientation="horizontal")
+#Nav_Menu=option_menu(None,["Resume","GFC & Regulatory Compliance Analysis",
+                           #"Capital Markets Analysis","Stablecoins Analysis","Geography of Cryptocurrency Report",
+                           #"DeFi Liquidity Aggregator","SQL Business Analysis","System Architecture Analysis",
+                           #"Financial & Marketing Analysis","Business Ethics Analysis"],
+                     #icons=['house','briefcase-fill','bank', 'currency-bitcoin', 'pin-map-fill', 'droplet-half',
+                            #'bar-chart-fill','cpu-fill', 'activity', 'credit-card-2-back'],
+                     #default_index=0,
+                     #orientation="horizontal")
+with st.sidebar:
+    Nav_Menu = option_menu("Data Analytics", ["Resume", "GFC & Regulatory Compliance Analysis",
+                                  "Capital Markets Analysis", "Stablecoins Analysis",
+                                  "Geography of Cryptocurrency Report",
+                                  "DeFi Liquidity Aggregator", "SQL Business Analysis", "System Architecture Analysis",
+                                  "Financial & Marketing Analysis", "Business Ethics Analysis"],
+                           icons=['house', 'briefcase-fill', 'bank', 'currency-bitcoin', 'pin-map-fill', 'droplet-half',
+                                  'bar-chart-fill', 'cpu-fill', 'activity', 'credit-card-2-back'],
+                           default_index=0,
+                           orientation="horizontal")
 
 #insert condition of the navigation meny
 
