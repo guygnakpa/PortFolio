@@ -1,5 +1,5 @@
 
-streamlit==1.17.0
+streamlit==1.26.0
 streamlit-option-menu==0.3.2
 requests==2.27.1
 babel==2.10.1
