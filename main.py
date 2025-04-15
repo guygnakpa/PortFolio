@@ -129,6 +129,20 @@ if Nav_Menu == "Resume":
     ###EXPERIENCE###
     st.markdown("""## Experience
      """)
+
+    txt("###### ****Morgan Stanley, New York, NY****", "****Mar 2023-Present****")
+    st.text("Director (AVP), NFR Data Analytics – Visualization & Reporting Solutions (Full-Time)")
+    st.markdown("""
+        - Led the end-to-end design and ownership of key risk metrics (KRI/KPI) reporting used by Governance, Business, and Board-level stakeholders across global regions. 
+        - Owned and enhanced enterprise data pipelines by managing schema, authoritative sources, and taxonomy alignment to support consistent GFC & NFR risk reporting. 
+        - Partner with regional teams across AMER, EMEA, and APAC to ensure timely and accurate data sourcing, and control alignment across multiple business units. 
+        - Utilize SQL to query, transform, and validate large-scale data sets for analysis, reducing manual processing and accelerating delivery timelines. 
+        - Engineered and maintain automation workflows using Alteryx and Python to increase efficiency and accuracy of recurring metric production.  
+        - Employ RAG methodology to measure, analyze, and escalate AML & Ops risk threshold breaches including EDD/PEP, Control Framework, and Internal Audits. 
+        - Leverage and manage data aggregator repository to service recurring ad-hoc and on-demand Audit requests. 
+        - Act as key contributor to the GFC Metrics Enhancement Program for effectiveness, data quality and strategic reporting in relation to control oversight. 
+        """)        
+            
     txt("###### ****BNY Mellon, Woodland Park, NJ****", "****Jul 2020-Jan 2021****")
     st.text("Analyst, Fund Of Funds Custody (Full-Time)")
     st.markdown("""
