@@ -100,10 +100,10 @@ if Nav_Menu == "Resume":
 # ###--------------------------------------------------------------##
     st.markdown("## Profile", unsafe_allow_html=True)
     st.info("""A goal-oriented and collaborative professional with years of experience in financial services. 
-    Hand on experience with fund management and administration for alternative assets in investment banking. Holds a 
+    Hand on experience with strategic analytics reporting, fund management, and alternative assets in investment banking. Holds a 
     graduate-level education in management sciences and quantitative methods. Skilled at utilizing analytical tools to 
-    better understand data for valuable insights with a focus on Data Analysis, ML Models, Data Visualization and Strategic 
-    Reporting. Ability to adapt quickly, identify inefficiencies and communicate effectively with stakeholders. Passionate about 
+    better understand data for valuable insights with a focus on Data Analysis, Data Visualization and Strategic Reporting. 
+    Ability to adapt quickly, identify inefficiencies and communicate effectively with stakeholders. Passionate about 
     financial instruments, technology and the implication of decentralized ledger technology for decades to come. Seeking a challenging 
     opportunity with a renown and innovative culture where my experience, skills and education can add value for all stakeholders.""")
 
